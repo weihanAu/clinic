@@ -62,7 +62,7 @@ function Edit({
           onChange: newCategory => setAttributes({
             category: newCategory
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Card, {})]
+        })]
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
       children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("This block will display a paginated list of posts.", "my-plugin")
@@ -198,7 +198,7 @@ module.exports = window["wp"]["i18n"];
   \************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"hudsonblocks/secondblock","version":"0.1.0","title":"secondblock","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","attributes":{"postsPerPage":{"type":"number","default":3},"currentPage":{"type":"number","default":1},"category":{"type":"number","default":0}},"example":{},"supports":{"html":false},"textdomain":"hudsonblocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"hudsonblocks/secondblock","version":"0.1.0","title":"secondblock","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","attributes":{"postsPerPage":{"type":"number","default":3},"currentPage":{"type":"number","default":1},"category":{"type":"number","default":0},"src":{"type":"string","selector":"img","attribute":"src","source":"attribute"}},"example":{},"supports":{"html":false},"textdomain":"hudsonblocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
 
 /***/ })
 

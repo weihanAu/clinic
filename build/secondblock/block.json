@@ -19,6 +19,12 @@
     "category": {
       "type": "number",
       "default": 0
+    },
+    "src": {
+      "type": "string",
+      "selector": "img",
+      "attribute": "src",
+      "source": "attribute"
     }
   },
   "example": {},

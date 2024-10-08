@@ -81,9 +81,9 @@ module.exports = window["wp"]["interactivity"];
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-/*!********************************!*\
-  !*** ./src/firstblock/view.js ***!
-  \********************************/
+/*!*********************************!*\
+  !*** ./src/blockbanner/view.js ***!
+  \*********************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/interactivity */ "@wordpress/interactivity");
 /* harmony import */ var _wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__);
@@ -110,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 /* eslint-disable no-console */
-console.log("Hello World! (from hudsonblocks-hudsonblocks block)");
+console.log("Hello World! (from blogbanners-blogbanners block)");
 /* eslint-enable no-console */
 /******/ })()
 ;

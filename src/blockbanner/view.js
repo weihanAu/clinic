@@ -21,5 +21,5 @@
  */
 import { store } from "@wordpress/interactivity";
 /* eslint-disable no-console */
-console.log("Hello World! (from hudsonblocks-hudsonblocks block)");
+console.log("Hello World! (from blogbanners-blogbanners block)");
 /* eslint-enable no-console */

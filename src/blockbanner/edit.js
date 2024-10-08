@@ -12,6 +12,7 @@ import { __ } from "@wordpress/i18n";
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
 import { useBlockProps, InspectorControls } from "@wordpress/block-editor";
+import { useState } from '@wordpress/element';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -24,7 +25,9 @@ import "./editor.scss";
 /**
  * custom import
  */
-import { PanelBody, TextControl, ToggleControl } from "@wordpress/components";
+import { PanelBody, TextControl, FormFileUpload } from "@wordpress/components";
+import { Button } from '@wordpress/components';
+import { MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -35,40 +38,50 @@ import { PanelBody, TextControl, ToggleControl } from "@wordpress/components";
  * @return {Element} Element to render.
  */
 export default function Edit({ attributes, setAttributes }) {
-	const { showStartingYear, startingYear } = attributes;
+
 	const currentYear = new Date().getFullYear().toString();
-
-	let displayDate;
-
-	if (showStartingYear && startingYear) {
-		displayDate = startingYear + "–" + currentYear;
-	} else {
-		displayDate = currentYear;
-	}
+	const [imageUrl, setImageUrl] = useState(attributes.bannerImage || '');
+	const [bannerTitle,setBannerTitle] = useState(attributes.bannerTitle || '');
 
 	return (
 		<>
 			<InspectorControls>
 				<PanelBody title={__("Settings", "copyright-date-block")}>
-					<ToggleControl
-						checked={!!showStartingYear}
-						label={__("Show starting year", "copyright-date-block")}
-						onChange={() =>
-							setAttributes({
-								showStartingYear: !showStartingYear,
-							})
-						}
+					<TextControl
+						label={__("Banner Title", "copyright-date-block")}
+						value={bannerTitle}
+						onChange={(value) => {
+							setAttributes({ bannerTitle: value });
+							setBannerTitle(value);
+						}}
 					/>
-					{showStartingYear && (
-						<TextControl
-							label={__("Starting year", "copyright-date-block")}
-							value={startingYear || ""}
-							onChange={(value) => setAttributes({ startingYear: value })}
+					
+					<MediaUploadCheck>
+						<MediaUpload
+							onSelect={ ( media ) =>{
+								setAttributes({bannerImage:media.url});
+								setImageUrl(media.url);
+							}
+							}
+							allowedTypes={ 'image' }
+							value={ '' }
+							render={ ( { open } ) => (
+								<Button onClick={ open }>Open Media Library</Button>
+							) }
 						/>
-					)}
+					</MediaUploadCheck>
+					 
 				</PanelBody>
 			</InspectorControls>
-			<p {...useBlockProps()}>© {displayDate}</p>
+			<div {...useBlockProps()}>
+				<p>please enter title and upload images for banner 
+				in the right section</p>
+				{imageUrl && (
+					<div className="image-preview">
+						<img src={imageUrl} alt="Uploaded Image" />
+					</div>
+               )}
+			</div>
 		</>
 	);
 }

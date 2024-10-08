@@ -1,19 +1,21 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "hudsonblocks/hudsonblocks",
+  "name": "hudsonblock/blogbanners",
   "version": "0.1.0",
-  "title": "Hudsonblocks",
+  "title": "blogbanners",
   "category": "widgets",
   "icon": "smiley",
   "description": "Example block scaffolded with Create Block tool.",
   "example": {},
   "attributes": {
-    "showStartingYear": {
-      "type": "boolean"
+    "bannerTitle": {
+      "type": "string",
+      "default": ""
     },
-    "startingYear": {
-      "type": "string"
+    "bannerImage": {
+      "type": "string",
+      "default": ""
     }
   },
   "supports": {
@@ -22,7 +24,7 @@
       "fontSize": true
     }
   },
-  "textdomain": "hudsonblocks",
+  "textdomain": "blogbanners",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",

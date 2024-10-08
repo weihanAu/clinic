@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function hudsonblocks_hudsonblocks_block_init() {
-	register_block_type( __DIR__ . '/build/firstblock' );
+	register_block_type( __DIR__ . '/build/blockbanner' );
 	register_block_type( __DIR__ . '/build/secondblock' );
 }
 add_action( 'init', 'hudsonblocks_hudsonblocks_block_init' );
