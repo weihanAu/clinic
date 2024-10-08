@@ -1,0 +1,18 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-hudsonblock-categorysection{
+text-align: center;
+background-color: rgb(217, 217, 217);
+}
+.wp-block-hudsonblock-categorysection .categories-container {
+  display: flex;
+  padding: 2em;
+  justify-content: space-around
+}
+.categories-title {
+  padding-top: 0.5em;
+}

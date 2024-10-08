@@ -27,6 +27,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 function hudsonblocks_hudsonblocks_block_init() {
 	register_block_type( __DIR__ . '/build/blockbanner' );
 	register_block_type( __DIR__ . '/build/secondblock' );
+	register_block_type( __DIR__ . '/build/categorysection' );
+	register_block_type( __DIR__ . '/build/popularposts' );
 }
 add_action( 'init', 'hudsonblocks_hudsonblocks_block_init' );
 
+function enqueue_slick_carousel() {
+    wp_enqueue_style( 'slick-carousel-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' );
+    wp_enqueue_script( 'slick-carousel-js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array( 'jquery' ), '', true );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_slick_carousel' );

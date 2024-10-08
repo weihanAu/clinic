@@ -39,48 +39,12 @@ import { MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
  */
 export default function Edit({ attributes, setAttributes }) {
 
-	const currentYear = new Date().getFullYear().toString();
-	const [imageUrl, setImageUrl] = useState(attributes.bannerImage || '');
-	const [bannerTitle,setBannerTitle] = useState(attributes.bannerTitle || '');
-
 	return (
 		<>
-			<InspectorControls>
-				<PanelBody title={__("Settings", "copyright-date-block")}>
-					<TextControl
-						label={__("Banner Title", "copyright-date-block")}
-						value={bannerTitle}
-						onChange={(value) => {
-							setAttributes({ bannerTitle: value });
-							setBannerTitle(value);
-						}}
-					/>
-					
-					<MediaUploadCheck>
-						<MediaUpload
-							onSelect={ ( media ) =>{
-								setAttributes({bannerImage:media.url});
-								setImageUrl(media.url);
-							}
-							}
-							allowedTypes={ 'image' }
-							value={ '' }
-							render={ ( { open } ) => (
-								<Button onClick={ open }><button>Open Media Library</button></Button>
-							) }
-						/>
-					</MediaUploadCheck>
-					 
-				</PanelBody>
-			</InspectorControls>
 			<div {...useBlockProps()}>
-				<p>please enter title and upload images for banner 
-				in the right section</p>
-				{imageUrl && (
-					<div className="image-preview">
-						<img src={imageUrl} alt="Uploaded Image" />
-					</div>
-               )}
+				<h2>
+					popular posts
+				</h2>
 			</div>
 		</>
 	);
