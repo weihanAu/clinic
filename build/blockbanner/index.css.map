@@ -1,1 +1,0 @@
-{"version":3,"file":"blockbanner/index.css","mappings":";;;AAAA;EACC;AACD,C","sources":["webpack://hudsonblocks/./src/blockbanner/editor.scss"],"sourcesContent":[".wp-block-blogbanners-blogbanners {\r\n\tborder: 1px dotted #f00;\r\n}"],"names":[],"sourceRoot":""}
