@@ -13,7 +13,7 @@
 .post-carousel {
   position: relative;
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 80em;
 }
 
 .slides {
@@ -25,6 +25,14 @@
   padding: 10px;
 }
 
+.slide-item .thumbnail img {
+  object-fit: contain;
+  margin: auto;
+}
+.slide-item .abstract {
+  max-width: 31.25em;
+  margin: auto;
+}
 .prev,
 .next {
   position: absolute;
