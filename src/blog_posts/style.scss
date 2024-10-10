@@ -1,0 +1,103 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-hudsonblock-blogposts {
+  text-align: center;
+  min-width: 100%;
+}
+
+.blog-posts-container {
+  display: flex;
+  flex-wrap: nowrap; /* Allow items to wrap */
+  gap: 20px; /* Space between items */
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  list-style: none; /* Remove default list styling */
+}
+
+.blog-posts-item {
+  background-color: #f9f9f9; /* Light background */
+  border: 1px solid #ddd; /* Border for separation */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  flex: 1 1 calc(33.333% - 20px); /* Responsive width */
+  display: flex; /* Flexbox for inner layout */
+  flex-direction: column; /* Stack content vertically */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for effects */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.blog-posts-item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.blog-posts-thumbnail {
+  width: 100%; /* Full width for thumbnail */
+  height: 200px; /* Fixed height for consistency */
+  overflow: hidden; /* Crop overflow */
+}
+
+.blog-posts-thumbnail img {
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.blog-posts-sub {
+  padding: 15px; /* Padding for text */
+}
+
+.blog-posts-headline {
+  font-size: 1.5em; /* Headline size */
+  margin: 0 0 10px; /* Margin below headline */
+  color: #333; /* Dark text color */
+}
+
+.blog-posts-date {
+  font-size: 0.9em; /* Smaller date size */
+  color: #888; /* Gray text color */
+  margin-bottom: 10px; /* Space below date */
+}
+.pagination {
+  margin: 20px 0; /* Space around pagination */
+  text-align: center; /* Center align */
+}
+
+.pagination a,
+.pagination span {
+  display: inline-block; /* Inline block for spacing */
+  margin: 0 5px; /* Space between links */
+  padding: 10px 15px; /* Padding for clickable area */
+  background-color: #f0f0f0; /* Light background */
+  color: #333; /* Dark text */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+}
+
+.pagination a:hover {
+  background-color: #ddd; /* Darker background on hover */
+}
+
+.pagination {
+  margin: 20px 0; /* Space around pagination */
+  text-align: center; /* Center align */
+}
+
+.pagination a,
+.pagination span {
+  display: inline-block; /* Inline block for spacing */
+  margin: 0 5px; /* Space between links */
+  padding: 10px 15px; /* Padding for clickable area */
+  background-color: #f0f0f0; /* Light background */
+  color: #333; /* Dark text */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+}
+
+.pagination a:hover {
+  background-color: #ddd; /* Darker background on hover */
+}
+

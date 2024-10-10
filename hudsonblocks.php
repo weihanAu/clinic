@@ -29,6 +29,7 @@ function hudsonblocks_hudsonblocks_block_init() {
 	register_block_type( __DIR__ . '/build/secondblock' );
 	register_block_type( __DIR__ . '/build/categorysection' );
 	register_block_type( __DIR__ . '/build/popularposts' );
+	register_block_type( __DIR__ . '/build/blog_posts' );
 }
 add_action( 'init', 'hudsonblocks_hudsonblocks_block_init' );
 

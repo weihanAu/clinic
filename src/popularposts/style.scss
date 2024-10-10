@@ -9,7 +9,11 @@
   min-width: 100%;
 }
 
-
+.thumbnail{
+  height: 250px;
+  overflow: hidden;
+  object-fit: contain;
+}
 .post-carousel {
   position: relative;
   margin: 0 auto;
@@ -18,18 +22,21 @@
 
 .slides {
   display: flex;
+  align-items: stretch; 
+  gap: 10px;
 }
 
 .slide-item {
   flex: 1 0 50%;
+  box-sizing: border-box; 
   padding: 10px;
 }
 
 .slide-item .thumbnail img {
   object-fit: contain;
   margin: auto;
-  width: 20em;
-  height:20em
+  width: 100%;
+  height: auto;
 }
 .slide-item .abstract {
   max-width: 31.25em;
