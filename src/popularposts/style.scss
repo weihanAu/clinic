@@ -6,18 +6,20 @@
  */
 .wp-block-hudsonblock-popularposts {
   text-align: center;
-  min-width: 100%;
+  padding: 2em;
+  background-color: #FBCDB3;
+  font-size: 1.6em;
 }
-
+.wp-block-hudsonblock-popularposts .headline {
+  font-size: 1.5em;
+}
 .thumbnail{
-  height: 250px;
   overflow: hidden;
   object-fit: contain;
+  aspect-ratio: 16 / 6;
 }
 .post-carousel {
   position: relative;
-  margin: 0 auto;
-  max-width: 80em;
 }
 
 .slides {
@@ -33,10 +35,11 @@
 }
 
 .slide-item .thumbnail img {
-  object-fit: contain;
+  object-fit: cover;
   margin: auto;
   width: 100%;
   height: auto;
+  max-width: 50em;
 }
 .slide-item .abstract {
   max-width: 31.25em;
@@ -54,9 +57,19 @@
 }
 
 .prev {
-  left: -50px;
+  left: 0em;
 }
 
 .next {
-  right: -50px;
+  right: 0em;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .wp-block-hudsonblock-popularposts .abstract{
+    font-size: 0.6em;
+  }
+  .wp-block-hudsonblock-popularposts .headline {
+    font-size: 1em;
+  }
 }
