@@ -33,8 +33,8 @@ $query = new WP_Query($args);
                 echo paginate_links(array(
                     'total'   => $query->max_num_pages,
                     'current' => $paged,
-                    'prev_text' => __('« Previous'),
-                    'next_text' => __('Next »'),
+                    'prev_text' => __(''),
+                    'next_text' => __(''),
                     'format' => '?paged=%#%', // Ensure the URL structure is correct
                 ));
                 ?>
@@ -48,18 +48,23 @@ $query = new WP_Query($args);
 
 <script>
 jQuery(document).ready(function($) {
-    $('.pagination a').on('click', function(e) {
+    $('.pagination').on('click', 'a', function(e) {
         e.preventDefault(); // Prevent default anchor click behavior
         var link = $(this).attr('href'); // Get the link's href
 
         // Load the new page via AJAX
         $.get(link, function(data) {
-            // Find the new posts container in the loaded data
+            // Find the new posts container and pagination in the loaded data
             var newContent = $(data).find('.blog-posts-container').html();
+            var newPagination = $(data).find('.pagination').html();
+
+            // Replace content and pagination
             $('.blog-posts-container').html(newContent); // Replace content
+            $('.pagination').html(newPagination); // Update pagination
             window.history.pushState(null, '', link); // Update the URL without refreshing
         });
     });
 });
+
 </script>
 
