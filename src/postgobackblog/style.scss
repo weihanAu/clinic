@@ -1,0 +1,34 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.post-goback-container {
+  display: flex;
+  flex-direction:row;
+  width: 100%;
+}
+
+.post-goback-container .post-goback-img{
+  width: 100%;
+  height: auto;
+  max-width: 15em;
+  aspect-ratio: 4/3;
+}
+
+.post-goback-container .post-goback-img-container{
+  flex: 1;
+}
+
+.post-goback-container .post-goback-category {
+  flex: 5;
+}
+
+.post-goback-container .categories-container{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+}
