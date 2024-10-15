@@ -6,9 +6,13 @@
 <div  <?php echo get_block_wrapper_attributes(); ?>>
     <div class="post-goback-container">
         <div class="post-goback-img-container post-goback-item">
-            <img decoding="async" class="post-goback-img"
-            src=<?php echo $attributes['bannerImage'] ?>
-            alt="">
+            <?php echo  the_post_thumbnail('full', ['class' => 'post-thumbnail']);?>
+        <div class="back-button">
+            <a href="/" class="back-link">
+                <span class="arrow">&#8592;</span> <!-- Unicode 左箭头 -->
+                <span class="text">Go Back</span>
+            </a>
+        </div>
         </div>
         <div class="post-goback-item post-goback-category">
             <h2 class="categories-title">-categories-</h2>

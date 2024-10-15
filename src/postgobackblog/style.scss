@@ -8,10 +8,13 @@
 .post-goback-container {
   display: flex;
   flex-direction:row;
-  width: 100%;
+  background-color: #FBCDB3;
+  padding: 10px;
 }
-
-.post-goback-container .post-goback-img{
+.post-goback-img-container{
+  background-color: white;
+}
+.post-goback-container .post-thumbnail{
   width: 100%;
   height: auto;
   max-width: 15em;
@@ -19,6 +22,7 @@
 }
 
 .post-goback-container .post-goback-img-container{
+  max-width: 15em;
   flex: 1;
 }
 
@@ -28,7 +32,61 @@
 
 .post-goback-container .categories-container{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 10px;
   justify-content: center;
+}
+
+.post-goback-container .categories-container p{
+  text-align: center;
+}
+
+.back-button {
+  display: flex;
+  /* 使用 flexbox 布局 */
+  align-items: center;
+  /* 垂直居中对齐 */
+  cursor: pointer;
+  /* 鼠标悬停时显示为指针 */
+}
+
+.back-link {
+  text-decoration: none;
+  /* 去掉链接下划线 */
+  color: #000;
+  /* 字体颜色 */
+  display: flex;
+  /* 使用 flexbox 布局 */
+  align-items: center;
+  /* 垂直居中对齐 */
+}
+
+.arrow {
+  margin-right: 5px;
+  /* 箭头和文本之间的间距 */
+  font-size: 20px;
+  /* 箭头的大小 */
+}
+
+.text {
+  font-size: 16px;
+  /* 文本大小 */
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+  .back-button {
+    /* 移动设备的样式 */
+    padding: 8px;
+  }
+
+  .arrow {
+    font-size: 18px;
+    /* 调整箭头大小 */
+  }
+
+  .text {
+    font-size: 14px;
+    /* 调整文本大小 */
+  }
 }
