@@ -31,6 +31,7 @@ function hudsonblocks_hudsonblocks_block_init() {
 	register_block_type( __DIR__ . '/build/popularposts' );
 	register_block_type( __DIR__ . '/build/blog_posts' );
 	register_block_type( __DIR__ . '/build/postgobackblog' );
+	register_block_type( __DIR__ . '/build/posttwocompare' );
 }
 add_action( 'init', 'hudsonblocks_hudsonblocks_block_init' );
 

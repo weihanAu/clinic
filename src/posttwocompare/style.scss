@@ -1,0 +1,42 @@
+.post-image-compare {
+  display: flex;
+  justify-content: space-between;
+  width: 80%; /* 控制整个容器的宽度 */
+  margin: 0 auto; /* 居中容器 */
+}
+
+.post-image-compare div {
+  flex: 1; /* 让两个图片均匀分布占据50% */
+  padding: 10px; /* 图片之间的间距 */
+  position: relative; /* 为了定位文字 */
+}
+
+.post-image-compare img {
+  width: 100%; /* 图片占据它所在div的全部宽度 */
+  height: auto;
+  border: 2px solid #000;
+  transition: filter 0.5s ease; /* 在图片上应用模糊过渡 */
+}
+
+img.blurred {
+  filter: blur(10px); /* 直接在图片上应用模糊效果 */
+}
+
+/* 文本始终显示 */
+.post-image-compare .after-image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  pointer-events: none;
+  font-size: 18px;
+  text-align: center;
+  z-index: 1; /* 确保文字在图片上方 */
+}
+.disable {
+  display: none;
+}
