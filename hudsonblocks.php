@@ -32,6 +32,9 @@ function hudsonblocks_hudsonblocks_block_init() {
 	register_block_type( __DIR__ . '/build/blog_posts' );
 	register_block_type( __DIR__ . '/build/postgobackblog' );
 	register_block_type( __DIR__ . '/build/posttwocompare' );
+	register_block_type( __DIR__ . '/build/qawithdrliew' );
+	register_block_type( __DIR__ . '/build/postquote' );
+	register_block_type( __DIR__ . '/build/postfuturereading' );
 }
 add_action( 'init', 'hudsonblocks_hudsonblocks_block_init' );
 

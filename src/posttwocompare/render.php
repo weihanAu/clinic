@@ -5,11 +5,11 @@
 ?>
 <div  <?php echo get_block_wrapper_attributes(); ?>>
     <div class="post-image-compare">
-        <div>
+        <div class="compare-img-container">
             <img src=<?php echo $attributes["bannerImage"] ?> alt="Before">
         </div>
 
-        <div class="blurred" id="after-image">
+        <div class="blurred compare-img-container" id="after-image">
             <img class="blurred" src=<?php echo $attributes["bannerImage2"] ?> alt="After">
             <div class="after-image-text">Click to reveal</div>
         </div>

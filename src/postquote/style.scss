@@ -1,0 +1,28 @@
+.wp-block-hudsonblock-postquote{
+  margin-top: 0.5em;
+}
+
+.post-quote-container{
+  // background-color: #f9f3ec;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.6em;
+  padding-top:1em;
+}
+
+.post-quote-container .post-quote-text{
+  padding: 0;
+  display: flex;
+  gap: 1em;
+}
+
+.post-quote-text::before{
+  content: "\201C";
+  display: block;
+  color: peachpuff;
+  font-size: 8em;
+  max-height: 1em;
+  font-weight: 900;
+  position: relative;
+  top: -0.4em;
+}
