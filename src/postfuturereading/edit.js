@@ -19,7 +19,7 @@ export default function Edit({ attributes, setAttributes }) {
         setIsLoading(true);
         apiFetch({ path: `/wp/v2/posts?search=${encodeURIComponent(searchTerm)}&per_page=100` }).then((fetchedPosts) => {
             const postOptions = fetchedPosts.map((post) => ({
-                value: post.id,
+                value: post,
                 label: post.title.rendered,
             }));
             setPosts(postOptions);
@@ -32,24 +32,31 @@ export default function Edit({ attributes, setAttributes }) {
         fetchPosts();
     }, []);
 
+    function debounce(func, timeout = 500){
+        let timer;
+        return (...args) => {
+          clearTimeout(timer);
+          timer = setTimeout(() => { func.apply(this, args); }, timeout);
+        };
+      }
     return (
         <>
             <div {...useBlockProps()}>
                 <h2>future reading</h2>
                 <div>
                     {post1
-                        ? __('Selected Post: ', 'text-domain') + post1
+                        ? __('Selected Post: ', 'text-domain') + post1.title.rendered
                         : __('No post selected.', 'text-domain')}
                 </div>
 				<div>
 				 <ComboboxControl
-                    label={__('Search for a Post', 'text-domain')}
-                    value={'post1'}
-                    //onChange={(newPostId) => setAttributes({ selectedPostId: parseInt(newPostId) })}
-                    onFilterValueChange={(inputValue) => {
+                    label={__('Search for a future reading 1', 'text-domain')}
+                    value={posts[0]}
+                    onChange={(post) =>{setAttributes({ post1: post })}}
+                    onFilterValueChange={debounce((inputValue) => {
 						setSearchInputvalue1(inputValue);
                         fetchPosts(inputValue); // Fetch posts based on search input
-                    }}
+                    })}
                     options={posts}
                     isLoading={isLoading}
                  />

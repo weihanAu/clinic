@@ -10,7 +10,7 @@
 	"example": {},
 	"attributes": {
 		"post1":{
-			"type": "array",
+			"type": "object",
 			"default":""
 		}
 	},
