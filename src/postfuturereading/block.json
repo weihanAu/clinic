@@ -12,6 +12,14 @@
 		"post1":{
 			"type": "object",
 			"default":""
+		},
+		"post2": {
+			"type": "object",
+			"default": ""
+		},
+		"post3": {
+			"type": "object",
+			"default": ""
 		}
 	},
 	"supports": {
