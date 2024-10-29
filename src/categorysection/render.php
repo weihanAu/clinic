@@ -4,7 +4,7 @@
  */
 ?>
 <div  <?php echo get_block_wrapper_attributes(); ?>>
-    <h2 class="categories-title">-categories-</h2>
+    <h2 class="categories-title">categories</h2>
 	<div class="categories-container">
         <?php
         $categories =get_categories(); 

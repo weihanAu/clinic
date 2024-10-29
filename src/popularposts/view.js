@@ -29,28 +29,6 @@ jQuery(document).ready(function($) {
         slidesToScroll: 2,
         prevArrow: $('.prev'),
         nextArrow: $('.next'),
-        infinite: false
-    });
-
-    // function equalizeHeights() {
-    //     let maxHeight = '500px';
-
-    //     // $('.slide-item').each(function() {
-    //     //     const itemHeight = $(this).outerHeight();
-    //     //     if (itemHeight > maxHeight) {
-    //     //         maxHeight = itemHeight;
-    //     //     }
-    //     // });
-
-    //     $('.slide-item').css('height', maxHeight);
-    // }
-
-    // // Call equalizeHeights on initialization
-    // equalizeHeights();
-
-    // Optionally, call it again on window resize
-    $(window).on('resize', function() {
-        equalizeHeights();
+        infinite: false // 如果不希望无限循环滑动，可以设为false
     });
 });
-
