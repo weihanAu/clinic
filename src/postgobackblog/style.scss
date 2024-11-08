@@ -15,15 +15,17 @@
   background-color: white;
 }
 .post-goback-container .post-thumbnail{
-  width: 100%;
   height: auto;
-  max-width: 15em;
-  aspect-ratio: 4/3;
+  width: 10em;
+  height: 10em;
 }
 
 .post-goback-container .post-goback-img-container{
   max-width: 15em;
   flex: 1;
+  background-color: #FBCDB3;
+  display: flex;
+  flex-direction: column;
 }
 
 .post-goback-container .post-goback-category {
@@ -75,18 +77,24 @@
 
 /* 响应式设计 */
 @media (max-width: 600px) {
-  .back-button {
-    /* 移动设备的样式 */
-    padding: 8px;
-  }
-
   .arrow {
     font-size: 18px;
     /* 调整箭头大小 */
   }
-
   .text {
     font-size: 14px;
     /* 调整文本大小 */
+  }
+  .post-goback-container{
+   display: block;
+  }
+  .back-link{
+    margin: auto;
+  }
+  .post-goback-img-container.post-goback-item{
+    margin: auto;
+  }
+  .post-goback-container .post-goback-img-container {
+    display: block;
   }
 }

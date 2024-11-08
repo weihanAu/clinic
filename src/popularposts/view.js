@@ -21,14 +21,10 @@
  */
 
 /* eslint-disable no-console */
-console.log( jQuery );
 /* eslint-enable no-console */
 jQuery(document).ready(function($) {
     $('.slides').slick({
         slidesToShow: 2,
         slidesToScroll: 2,
-        prevArrow: $('.prev'),
-        nextArrow: $('.next'),
-        infinite: false // 如果不希望无限循环滑动，可以设为false
     });
 });
