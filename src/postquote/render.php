@@ -6,9 +6,7 @@
 <div  <?php echo get_block_wrapper_attributes(); ?>>
    <div class="post-quote-container">
         <p class="post-quote-text">
-            lorem ipsam lorem ipsamlorem ipsam lorem ipsamlorem ipsam lorem ipsamlorem ipsam lorem ipsam
-            lorem ipsam lorem ipsamlorem ipsam lorem ipsamlorem ipsam lorem ipsamlorem ipsam lorem ipsam
-            lorem ipsam lorem ipsamlorem ipsam lorem ipsamlorem ipsam lorem ipsamlorem ipsam lorem ipsam
+           <?php echo $attributes['paragraph'] ?>
         </p>
    </div>
 </div>

@@ -36,21 +36,12 @@ import { PanelBody, TextControl, FormFileUpload } from "@wordpress/components";
  * @return {Element} Element to render.
  */
 export default function Edit({ attributes, setAttributes }) {
-	 const [bannerTitle,setBannerTitle] = useState(attributes.bannerTitle || '');
 	 const [paragraph,setBannerparagraph] = useState(attributes.paragraph || '');
 
 	return (
 		<>
 			<InspectorControls>
 				<PanelBody title={__("Settings", "settings for Q & A")}>
-				   <TextControl
-						label={__("Title", "copyright-date-block")}
-						value={bannerTitle}
-						onChange={(value) => {
-							setAttributes({ bannerTitle: value });
-							setBannerTitle(value);
-						}}
-					/>
 					<TextControl
 						label={__("paragraph", "copyright-date-block")}
 						value={paragraph}

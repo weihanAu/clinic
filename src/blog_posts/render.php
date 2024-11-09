@@ -16,14 +16,16 @@ $query = new WP_Query($args);
         <?php if ($query->have_posts()) : ?>
             <ul class="blog-posts-container">
                 <?php while ($query->have_posts()) : $query->the_post(); ?>
+                <a href="<?php the_permalink(); ?>">
                     <li class="blog-posts-item">
                         <div class="blog-posts-thumbnail blog-posts-sub"><?php the_post_thumbnail(); ?></div>
                         <div class="blog-posts-sub">
-                            <h2 class="blog-posts-headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                            <p class="blog-posts-date"><?php echo get_the_date(); ?></p> 
+                            <h2 class="blog-posts-headline"><?php the_title(); ?></h2>
+                            <span class="blog-posts-date"><?php echo get_the_date(); ?></span> 
                             <div><?php the_excerpt(); ?></div>
                         </div>
                     </li>
+                </a>
                 <?php endwhile; ?>
             </ul>
 

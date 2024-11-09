@@ -21,9 +21,4 @@
  */
 import { store } from "@wordpress/interactivity";
 /* eslint-disable no-console */
-$(document).ready(function() {
-    $('#after-image').on('click', function() {
-        $(this).toggleClass('clear');
-    });
-});
 /* eslint-enable no-console */

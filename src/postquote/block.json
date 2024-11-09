@@ -9,19 +9,7 @@
 	"description": "Example block scaffolded with Create Block tool.",
 	"example": {},
 	"attributes": {
-		"video_url": {
-			"type": "string",
-			"default": ""
-		},
-		"bannerTitle": {
-			"type": "string",
-			"default": ""
-		},
 		"paragraph": {
-			"type": "string",
-			"default": ""
-		},
-		"smallTitle": {
 			"type": "string",
 			"default": ""
 		}

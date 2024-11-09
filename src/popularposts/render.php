@@ -5,8 +5,8 @@
 ?>
 <div  <?php echo get_block_wrapper_attributes(); ?>>
 	<div class="popularposts-container">
-        <h2 class="popularposts-title">-most popular posts-</h2>
-        <?php
+        <h2 class="popularposts-title">most popular posts</h2>
+        <?php   
         // Define arguments for the query
          $args = array(
             'category_name' => 'mostpopular', // Fetch posts from 'mostpopular' category

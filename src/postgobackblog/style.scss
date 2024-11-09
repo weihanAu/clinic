@@ -4,12 +4,12 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-
+.wp-block-hudsonblock-postgoback{
+  margin-top: 1em;
+}
 .post-goback-container {
   display: flex;
   flex-direction:row;
-  background-color: #FBCDB3;
-  padding: 10px;
 }
 .post-goback-img-container{
   background-color: white;
@@ -74,25 +74,25 @@
   font-size: 16px;
   /* 文本大小 */
 }
+.post-goback-img-container img{
+  margin:0 !important;
+}
 
 /* 响应式设计 */
 @media (max-width: 600px) {
+  .post-goback-img-container.post-goback-item{
+    max-width: 10em;
+  }
   .arrow {
-    font-size: 18px;
+    font-size: 12px;
     /* 调整箭头大小 */
   }
   .text {
-    font-size: 14px;
+    font-size: 12px;
     /* 调整文本大小 */
   }
   .post-goback-container{
    display: block;
-  }
-  .back-link{
-    margin: auto;
-  }
-  .post-goback-img-container.post-goback-item{
-    margin: auto;
   }
   .post-goback-container .post-goback-img-container {
     display: block;

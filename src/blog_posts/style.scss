@@ -5,54 +5,47 @@
  * Replace them with your own styles or remove the file completely.
  */
 .wp-block-hudsonblock-blogposts {
+  margin-top: 1em;
   text-align: center;
-  min-width: 100%;
   position: relative;
+  padding: 0 1em 0 1em;
 }
 
 .blog-posts-container {
-  display: flex;
-  flex-wrap: nowrap; /* Allow items to wrap */
-  gap: 20px; /* Space between items */
-  margin: 0; /* Reset margin */
+  margin: auto; /* Reset margin */
   padding: 0; /* Reset padding */
   list-style: none; /* Remove default list styling */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 1400px;
+  gap: 0.8em;
 }
 
 .blog-posts-item {
   background-color: #f9f9f9; /* Light background */
-  border: 1px solid #ddd; /* Border for separation */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  flex: 1 1 calc(33.333% - 20px); /* Responsive width */
+  // border: 1px solid #ddd; /* Border for separation */
+  // border-radius: 8px; /* Rounded corners */
+  // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   display: flex; /* Flexbox for inner layout */
   flex-direction: column; /* Stack content vertically */
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for effects */
+  // transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for effects */
   overflow: hidden; /* Prevent overflow */
 }
 
-.blog-posts-item:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
-}
 
 .blog-posts-thumbnail {
   width: 100%; /* Full width for thumbnail */
-  height: 200px; /* Fixed height for consistency */
   overflow: hidden; /* Crop overflow */
 }
 
-.blog-posts-thumbnail img {
+.wp-block-hudsonblock-blogposts .blog-posts-thumbnail img {
   width: 100%; /* Responsive image */
   height: auto; /* Maintain aspect ratio */
-}
-
-.blog-posts-sub {
-  padding: 15px; /* Padding for text */
+  aspect-ratio: 1000 / 667;
 }
 
 .blog-posts-headline {
-  font-size: 1.5em; /* Headline size */
+  font-size: 24px;
   margin: 0 0 10px; /* Margin below headline */
   color: #333; /* Dark text color */
 }
@@ -104,4 +97,32 @@
 
 .wp-block-hudsonblock-blogposts .slick-arrow,.wp-block-hudsonblock-blogposts .prev,.wp-block-hudsonblock-blogposts .next{
   display: none !important;
+}
+
+.wp-block-hudsonblock-blogposts .blog-posts-sub p{
+  width: 100%;
+  font-size: 16px;
+}
+.wp-block-hudsonblock-blogposts .blog-posts-date{
+  background-color: #FBCDB3;
+  display: inline-block;
+  font-size: 16px;
+  color: black;
+  padding:0.2em;
+  border-radius: 20%;
+}
+@media(max-width:500px) {
+  .wp-block-hudsonblock-blogposts .blog-posts-sub p {
+    font-size: 1.2em;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    /* Limits to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+    .wp-block-hudsonblock-blogposts .blog-posts-date {
+     font-size: 12px;
+    }
 }
