@@ -20,9 +20,10 @@ $query = new WP_Query($args);
                     <li class="blog-posts-item">
                         <div class="blog-posts-thumbnail blog-posts-sub"><?php the_post_thumbnail(); ?></div>
                         <div class="blog-posts-sub">
+                            <div class="blog-posts-date"><span><?php echo get_the_date(); ?></span></div> 
                             <h2 class="blog-posts-headline"><?php the_title(); ?></h2>
-                            <span class="blog-posts-date"><?php echo get_the_date(); ?></span> 
                             <div><?php the_excerpt(); ?></div>
+                            <div class="r-more">Read More</div>
                         </div>
                     </li>
                 </a>

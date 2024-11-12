@@ -15,10 +15,15 @@
   margin: auto; /* Reset margin */
   padding: 0; /* Reset padding */
   list-style: none; /* Remove default list styling */
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
   gap: 0.8em;
+}
+.wp-block-hudsonblock-blogposts .blog-posts-container .blog-posts-item{
+  padding-top: 1.2em;
+}
+.wp-block-hudsonblock-blogposts .blog-posts-item{
+  max-height: 400px;
 }
 
 .blog-posts-item {
@@ -26,10 +31,10 @@
   // border: 1px solid #ddd; /* Border for separation */
   // border-radius: 8px; /* Rounded corners */
   // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  display: flex; /* Flexbox for inner layout */
-  flex-direction: column; /* Stack content vertically */
-  // transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for effects */
+  display: grid; /* Flexbox for inner layout */
+  grid-template-columns: 1fr 2fr;
   overflow: hidden; /* Prevent overflow */
+  gap: 10px;
 }
 
 
@@ -41,7 +46,8 @@
 .wp-block-hudsonblock-blogposts .blog-posts-thumbnail img {
   width: 100%; /* Responsive image */
   height: auto; /* Maintain aspect ratio */
-  aspect-ratio: 1000 / 667;
+  aspect-ratio: 4 / 3;
+  object-fit:cover;
 }
 
 .blog-posts-headline {
@@ -54,6 +60,7 @@
   font-size: 0.9em; /* Smaller date size */
   color: #888; /* Gray text color */
   margin-bottom: 10px; /* Space below date */
+  width: 100%;
 }
 .pagination {
   margin: 20px 0; /* Space around pagination */
@@ -98,12 +105,21 @@
 .wp-block-hudsonblock-blogposts .slick-arrow,.wp-block-hudsonblock-blogposts .prev,.wp-block-hudsonblock-blogposts .next{
   display: none !important;
 }
-
+.wp-block-hudsonblock-blogposts .blog-posts-sub{
+  position: relative;
+}
 .wp-block-hudsonblock-blogposts .blog-posts-sub p{
   width: 100%;
   font-size: 16px;
 }
 .wp-block-hudsonblock-blogposts .blog-posts-date{
+  text-align: start;
+  margin: 0;
+}
+.wp-block-hudsonblock-blogposts .blog-posts-sub p{
+  text-align: start;
+}
+.wp-block-hudsonblock-blogposts .blog-posts-date span{
   background-color: #FBCDB3;
   display: inline-block;
   font-size: 16px;
@@ -111,6 +127,17 @@
   padding:0.2em;
   border-radius: 20%;
 }
+.wp-block-hudsonblock-blogposts .r-more{
+  position: absolute;
+  bottom: 0;
+  font-size: 16px;
+  font-weight:600;
+  text-decoration: underline;
+}
+.wp-block-hudsonblock-blogposts .blog-posts-headline{
+  text-transform: uppercase;
+}
+
 @media(max-width:500px) {
   .wp-block-hudsonblock-blogposts .blog-posts-sub p {
     font-size: 1.2em;
@@ -122,7 +149,10 @@
     text-overflow: ellipsis;
   }
 
-    .wp-block-hudsonblock-blogposts .blog-posts-date {
-     font-size: 12px;
-    }
+  .wp-block-hudsonblock-blogposts .blog-posts-date {
+    font-size: 12px;
+  }
+  .wp-block-hudsonblock-blogposts .blog-posts-headline{
+    font-size: 16px;
+  }
 }

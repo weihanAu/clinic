@@ -3,6 +3,7 @@
   justify-content: space-between;
   width: 100%; /* 控制整个容器的宽度 */
   margin: 0 auto; /* 居中容器 */
+  background-color: #FBCDB3;
 }
 
 .post-image-compare div {
@@ -14,7 +15,6 @@
   width: 100% !important; /* 图片占据它所在div的全部宽度 */
   height: 100% !important;
   margin: 0 !important;
-  border: 2px solid #000;
   transition: filter 0.5s ease; /* 在图片上应用模糊过渡 */
   object-fit: fill;
 }

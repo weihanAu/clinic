@@ -12,6 +12,6 @@
             ?>
         </p>
     </div>
-    <p class="profile-footer">profile footer at the end of each blog</p>
+    <p class="profile-footer"></p>
 </div>
 </div>
