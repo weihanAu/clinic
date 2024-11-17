@@ -21,7 +21,13 @@
   max-width: 40em;
   margin: auto;
 }
-
+.wp-block-hudsonblock-popularposts .slide-item p{
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .wp-block-hudsonblock-popularposts .slide-item a .thumbnail img{
   width: 100%;
   height: 100%;
@@ -30,25 +36,19 @@
   font-size: 0;
   border-radius: 50%;
   border: none;
-  background-color: antiquewhite;
+  background-color: #FBCDB3;
 }
 .slick-prev{
   position: absolute;
   left: -20px;
-  top: 30%;
+  top: 50%;
+  transform: translateY(-50%)
 }
 .slick-next {
   position: absolute;
   right: -20px;
-  top: 30%;
-}
-.slick-prev::before {
-  content: "<";
-  font-size: 20px;
-}
-.slick-next::before {
-  content: ">";
-  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%)
 }
 
 .thumbnail{
@@ -65,24 +65,30 @@
 }
 .wp-block-hudsonblock-popularposts h2{
   font-size: 2em;
+  font-weight: 400;
 }
 
 
-@media(max-width:500px){
-  .abstract{
-    font-size: 1.2em;
+@media (max-width:800px) {
+  .wp-block-hudsonblock-popularposts .abstract p{
     display: -webkit-box;
-    -webkit-line-clamp: 8;
+    -webkit-line-clamp: 6;
     /* Limits to 3 lines */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 1.4rem;
+    letter-spacing: 0;
+    text-align: start;
   }
-  .wp-block-hudsonblock-popularposts .headline{
-    font-size: 16px;
+
+  .wp-block-hudsonblock-popularposts .headline {
+    font-size: 2rem;
     font-weight: bold;
   }
-  .wp-block-hudsonblock-popularposts .abstract p{
-    font-size: 14px;
+
+  .wp-block-hudsonblock-popularposts .popularposts-container{
+    padding: 2rem 7.5vw !important;
   }
+
 }

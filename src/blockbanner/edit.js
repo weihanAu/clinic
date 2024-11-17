@@ -42,6 +42,7 @@ export default function Edit({ attributes, setAttributes }) {
 	const currentYear = new Date().getFullYear().toString();
 	const [imageUrl, setImageUrl] = useState(attributes.bannerImage || '');
 	const [bannerTitle,setBannerTitle] = useState(attributes.bannerTitle || '');
+	const [bannerText,setBannerText] = useState(attributes.bannerText || '');
 
 	return (
 		<>
@@ -53,6 +54,14 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(value) => {
 							setAttributes({ bannerTitle: value });
 							setBannerTitle(value);
+						}}
+					/>
+					<TextControl
+						label={__("Banner Text", "copyright-date-block")}
+						value={bannerText}
+						onChange={(value) => {
+							setAttributes({ bannerText: value });
+							setBannerText(value);
 						}}
 					/>
 					

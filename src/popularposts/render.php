@@ -5,7 +5,7 @@
 ?>
 <div  <?php echo get_block_wrapper_attributes(); ?>>
 	<div class="popularposts-container">
-        <h2 class="popularposts-title">most popular posts</h2>
+        <h2 class="popularposts-title">Popular Topics</h2>
         <?php   
         // Define arguments for the query
          $args = array(

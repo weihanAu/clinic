@@ -22,7 +22,8 @@ $query = new WP_Query($args);
                         <div class="blog-posts-sub">
                             <div class="blog-posts-date"><span><?php echo get_the_date(); ?></span></div> 
                             <h2 class="blog-posts-headline"><?php the_title(); ?></h2>
-                            <div><?php the_excerpt(); ?></div>
+                            <p class="blog-posts-category"><?php echo get_the_category()[0]->name ?></p>
+                            <div class="blog-posts-excerpt"><?php the_excerpt(); ?></div>
                             <div class="r-more">Read More</div>
                         </div>
                     </li>

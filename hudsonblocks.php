@@ -44,3 +44,4 @@ function enqueue_slick_carousel() {
     wp_enqueue_script( 'slick-carousel-js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array( 'jquery' ), '', true );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_slick_carousel' );
+
