@@ -22,8 +22,9 @@
     </div>
     <div>
         <a target="_blank"  href="https://www.youtube.com/@drjulianliew">
-            <i class="fa fa-youtube-play" style="font-size:36px;color:red"></i>
+            <i class="fa fa-youtube-play" style="font-size:36px;color:red;display:inline-block"></i>
         </a>
+        <span class="fa-sub">SUBSCRIBE FOR MORE INSIGHTS FROM DR LIEW</span>
     </div>
 </div>
 

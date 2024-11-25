@@ -13,6 +13,7 @@ import { __ } from "@wordpress/i18n";
  */
 import { useBlockProps, InspectorControls } from "@wordpress/block-editor";
 import { useState } from '@wordpress/element';
+import { MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -43,8 +44,7 @@ export default function Edit({ attributes, setAttributes }) {
 
 	return (
 		<>
-			<InspectorControls>
-				<PanelBody title={__("Settings", "settings for Q & A")}>
+			<div {...useBlockProps()}>
 				   <TextControl
 						label={__("Title", "copyright-date-block")}
 						value={bannerTitle}
@@ -69,19 +69,24 @@ export default function Edit({ attributes, setAttributes }) {
 							setBannerparagraph(value);
 						}}
 					/>
-					<TextControl
-						label={__("video url", "copyright-date-block")}
-						value={video_url}
-						onChange={(value) => {
-							setAttributes({ video_url: value });
-							setBannervideo_url(value);
-						}}
-					/>
-				</PanelBody>
-			</InspectorControls>
-			<div {...useBlockProps()}>
-				<h2>Q & A DR JULIAN LIEW TALKS</h2>
-				<p>please enter your customization on the right section</p>
+					<MediaUploadCheck>
+						<div>please select video</div>
+						<video width="320" height="240" controls>
+							  <source src={video_url} type="video/mp4" />
+						</video>
+						<MediaUpload
+							onSelect={ ( media ) =>
+							{	setBannervideo_url(media.url);
+								setAttributes({ video_url: media.url });
+							}
+							}
+								value={ video_url }
+								render={ ( { open } ) => (
+									<button onClick={ open }>Open Media Library</button>
+								) }
+							/>
+				</MediaUploadCheck>
+
 			</div>
 		</>
 	);

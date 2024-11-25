@@ -39,8 +39,9 @@ import { MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
  */
 export default function Edit({ attributes, setAttributes }) {
 
-	const [imageUrl, setImageUrl] = useState(attributes.bannerImage || '');
-	const {content,setContent}=useState(attributes.content);
+	const [imageUrl, setImageUrl] = useState(attributes["bannerImage"] || '');
+	const {content,setContent} = useState(attributes["content"]);
+
 	return (
 		<>
 			<div {...useBlockProps()}>
@@ -61,9 +62,9 @@ export default function Edit({ attributes, setAttributes }) {
 				</MediaUploadCheck>
 				<RichText
 					tagName="p" // The tag here is the element output and editable in the admin
-					value={ attributes.content } // Any existing content, either from the database or an attribute default
+					value={ attributes["content"]  } // Any existing content, either from the database or an attribute default
 					allowedFormats={ [ 'core/bold', 'core/italic' ] } // Allow the content to be made bold or italic, but do not allow other formatting options
-					onChange={ ( content ) => setAttributes({content:content}) } // Store updated content as a block attribute
+					onChange={ ( content ) => {setAttributes({content:content}) }} // Store updated content as a block attribute
 					placeholder={ __( 'intro...' ) } // Display this text before any content has been added by the user
             	/>
 			</div>

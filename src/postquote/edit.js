@@ -11,7 +11,7 @@ import { __ } from "@wordpress/i18n";
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, InspectorControls } from "@wordpress/block-editor";
+import { useBlockProps, RichText } from "@wordpress/block-editor";
 import { useState } from '@wordpress/element';
 
 /**
@@ -40,21 +40,15 @@ export default function Edit({ attributes, setAttributes }) {
 
 	return (
 		<>
-			<InspectorControls>
-				<PanelBody title={__("Settings", "settings for Q & A")}>
-					<TextControl
-						label={__("paragraph", "copyright-date-block")}
+			<div {...useBlockProps()}>
+				<TextControl
+						label={__("Quote Paragraph", "copyright-date-block")}
 						value={paragraph}
 						onChange={(value) => {
 							setAttributes({ paragraph: value });
 							setBannerparagraph(value);
-						}}
-					/>
-				</PanelBody>
-			</InspectorControls>
-			<div {...useBlockProps()}>
-				<h2>post quote block</h2>
-				<p>please enter your customization on the right section</p>
+						}} 
+				/>
 			</div>
 		</>
 	);

@@ -14,7 +14,7 @@
 			"default": ""
 		},
 		"content":{
-			"type":"rich-text",
+			"type": "string",
 			"default":""
 		}
 	},

@@ -1,7 +1,7 @@
 .reading-section {
-  max-width: 1200px;
   margin: 0 auto;
   margin-top: 1em;
+  padding: 0 2rem;
 }
 
 .reading-section .reading-title {
@@ -19,6 +19,7 @@
 
 .reading-section .reading-item {
   margin-bottom: 10px;
+  text-decoration: underline;
 }
 
 .reading-item a {

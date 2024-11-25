@@ -73,7 +73,7 @@
   width: 100%;
 }
 .pagination {
-  margin: 20px 0; /* Space around pagination */
+  margin: 4rem 0; /* Space around pagination */
   text-align: center; /* Center align */
 }
 
@@ -159,6 +159,10 @@
   text-transform: uppercase;
   text-align: start;
   margin-top: 0.5em;
+}
+
+.wp-block-hudsonblock-blogposts .pagination{
+  font-size: 1.6rem;
 }
 
 @media (max-width:500px){

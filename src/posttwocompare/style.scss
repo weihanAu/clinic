@@ -1,9 +1,13 @@
+.wp-block-hudsonblock-postcompare{
+  padding: 0 4rem;
+  margin-bottom: 3rem;
+}
+
 .post-image-compare {
   display: flex;
   justify-content: space-between;
   width: 100%; /* 控制整个容器的宽度 */
   margin: 0 auto; /* 居中容器 */
-  background-color: #FBCDB3;
 }
 
 .post-image-compare div {
@@ -31,18 +35,22 @@ img.blurred {
 /* 文本始终显示 */
 .post-image-compare .after-image-text {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  pointer-events: none;
-  font-size: 18px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 3rem;
   text-align: center;
   z-index: 1; /* 确保文字在图片上方 */
 }
 .disable {
   display: none;
+}
+
+.post-image-compare .post-text{
+  text-align: center;
+  padding: 0;
+  font-size: 1.8rem;
 }
