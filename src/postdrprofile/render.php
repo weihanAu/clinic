@@ -12,6 +12,5 @@
             ?>
         </p>
     </div>
-    <p class="profile-footer"></p>
 </div>
 </div>

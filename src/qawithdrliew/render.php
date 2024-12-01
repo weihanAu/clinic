@@ -13,6 +13,12 @@
             <?php echo $attributes["paragraph"] ?>
             </p>
             <a target="_blank" class="ma">MORE ABOUT THIS PROCEDURE</a>
+            <div>
+                <a target="_blank"  href="https://www.youtube.com/@drjulianliew">
+                    <i class="fa fa-youtube-play" style="font-size:36px;color:red;display:inline-block"></i>
+                </a>
+                <span class="fa-sub">SUBSCRIBE FOR MORE INSIGHTS FROM DR LIEW</span>
+            </div>
         </div>
         <div class="qa-item right-item">
             <div class="iframe-container ">
@@ -20,11 +26,6 @@
             </div>
         </div>
     </div>
-    <div>
-        <a target="_blank"  href="https://www.youtube.com/@drjulianliew">
-            <i class="fa fa-youtube-play" style="font-size:36px;color:red;display:inline-block"></i>
-        </a>
-        <span class="fa-sub">SUBSCRIBE FOR MORE INSIGHTS FROM DR LIEW</span>
-    </div>
+    
 </div>
 

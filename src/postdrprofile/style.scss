@@ -1,5 +1,6 @@
 .wp-block-hudsonblock-postdrprofile{
-  margin-top: 1em;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 .dr-profile {
   border: 2px solid #FF8C00; /* Border color similar to the image */
@@ -33,7 +34,7 @@
 
 .dr-profile .container{
   display: flex;
-  gap: 10px;
+  gap: 4rem;
   flex-wrap: wrap;
 }
 .dr-profile .image-profile{
@@ -49,6 +50,7 @@
 }
 .dr-profile .profile-content{
   flex: 3;
+  overflow-wrap:anywhere;
 }
 
 @media screen and (max-width: 460px) {
