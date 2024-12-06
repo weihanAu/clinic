@@ -7,10 +7,10 @@
     <div class="post-goback-container">
         <a href="/">
         <div class="post-goback-img-container post-goback-item">
-            <img src=<?php echo $attributes['bannerImage'] ?> >
+            <!-- <img src=<?php echo $attributes['bannerImage'] ?> > -->
             <div class="back-button">
                 <a class="back-link">
-                    <span class="arrow">&#8592;</span> <!-- Unicode 左箭头 -->
+                    <span class="arrow"></span> <!-- Unicode 左箭头 -->
                     <span class="text">Go Back</span>
                 </a>
             </div>

@@ -1,8 +1,7 @@
 .wp-block-hudsonblock-postqadrliew{
   background-color: #FBCDB3;
     /* Light background color to match the design */
-  margin-top: 3em;
-  padding: 0 4rem 1rem;
+  margin-top: 8em;
 }
 
 /* Main container */
@@ -11,15 +10,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
-  margin: 0 auto;
+  align-items: stretch;
 }
 
 /* Left side: Text content */
 .left-item {
-  flex-basis: 50%;
-  padding-right: 20px;
+  flex-basis: 55%;
+  padding: 20px;
   box-sizing: border-box;
 }
 
@@ -31,7 +28,7 @@
 }
 
 .left-item h3 {
-  font-size: 20px;
+  font-size: 3.4rem;
   color: #4b4b4b;
   margin-bottom: 15px;
 }
@@ -64,8 +61,7 @@
 /* Responsive YouTube video with a 16:9 aspect ratio */
 .iframe-container {
   width: 100%;
-  padding-bottom: 56.25%; /* This maintains the 16:9 aspect ratio */
-  height: 0;
+  height: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -87,14 +83,13 @@
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-  .qa-container {
-    flex-direction: column;
-}
+  // .qa-container {
+  //   flex-direction: column;
+  // }
 
 .left-item, 
 .right-item {
     flex-basis: 100%; /* Ensure both sections take full width */
-    padding-right: 0;
     margin-bottom: 20px;
 }
 
