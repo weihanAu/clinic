@@ -1,8 +1,5 @@
 .wp-block-hudsonblock-postquote{
   margin-top: 3rem !important;
-  border: 2px solid #FF8C00;
-    /* Border color similar to the image */
-    padding: 20px;
     margin: auto;
     font-family: Arial, sans-serif;
     color: #333;
@@ -22,7 +19,8 @@
 .post-quote-container .post-quote-text{
   padding: 0;
   letter-spacing: 0.05rem;
-  font-size: 1.3em;
+  font-size: 2em !important;
+  line-height: 4rem !important;
 }
 
 .post-quote-symbole::before{

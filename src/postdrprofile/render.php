@@ -6,11 +6,14 @@
         <div class="image-container">
             <img class="image-profile" src=<?php echo $attributes['bannerImage'] ?> alt="Dr. Julian Liew">
         </div>
-        <p class="profile-content">
-            <?php 
-                echo $attributes['content']
-            ?>
-        </p>
+        <div class="profile-content-container profile-content">
+            <p class="profile-content profile-content-item">
+                <?php 
+                    echo $attributes['content']
+                ?>
+            </p>
+            <img class="profile-content-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/plugin/bottome.png" alt="social icons" />
+        </div>
     </div>
 </div>
 </div>

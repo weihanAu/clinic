@@ -3,8 +3,6 @@
   margin-bottom: 3em;
 }
 .dr-profile {
-  border: 2px solid #FF8C00; /* Border color similar to the image */
-  padding: 20px;
   margin: auto;
   font-family: Arial, sans-serif;
   color: #333;
@@ -18,8 +16,8 @@
   border-radius: 5px;
 }
 .dr-profile h2 {
-  font-size: 1.5em;
-  color: #FF8C00;
+  font-size: 4rem;
+  color: #333;
   margin-top: 0;
 }
 .dr-profile p {
@@ -51,6 +49,16 @@
 .dr-profile .profile-content{
   flex: 3;
   overflow-wrap:anywhere;
+  font-size: 2.4rem !important;
+}
+
+.profile-content-container{
+    position: relative;
+}
+.profile-content-img{
+  position: absolute;
+  bottom: 0;
+  margin: 0 !important;
 }
 
 @media screen and (max-width: 460px) {

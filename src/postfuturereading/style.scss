@@ -1,15 +1,12 @@
 .reading-section {
   margin: 0 auto;
   margin-top: 3em;
-  padding: 0 2rem;
 }
 
 .reading-section .reading-title {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 4rem;
   color: #333;
   margin-bottom: 16px;
-  font-weight:bold;
 }
 
 .reading-section .reading-list {
@@ -25,7 +22,7 @@
 .reading-item a {
   text-decoration: none;
   color: black;
-  font-size: 1em;
+  font-size: 2em !important;
 }
 
 .reading-item a:hover {
