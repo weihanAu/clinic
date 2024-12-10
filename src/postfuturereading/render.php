@@ -4,7 +4,7 @@
  */
 ?>
 <div class="reading-section" <?php echo get_block_wrapper_attributes(); ?>>
-    <h2 class="reading-title">FUTURE READING ABDOMINOPLASTY WITH DR LIEW</h2>
+    <h2 class="reading-title"><?php echo $attributes["title"]; ?></h2>
     <ul class="reading-list">
         <li class="reading-item"><a href="<?php echo $attributes["post1"]["link"]; ?>"><?php echo $attributes["post1"]['title']['rendered']; ?></a></li>
         <li class="reading-item"><a href="<?php echo $attributes["post2"]["link"]; ?>"><?php echo $attributes["post2"]['title']['rendered']; ?></a></li>

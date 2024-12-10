@@ -44,7 +44,7 @@
 }
 .dr-profile .image-container{
   flex: 1;
-  min-width: 100px;
+  min-width: 330px;
 }
 .dr-profile .profile-content{
   flex: 3;
@@ -61,6 +61,16 @@
   margin: 0 !important;
 }
 
+@media screen and (max-width:769px) {
+  .dr-profile .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .profile-content-img{
+    position: relative;
+  }
+}
+
 @media screen and (max-width: 460px) {
   .dr-profile .container{
     display: block;
@@ -69,3 +79,5 @@
     object-fit: fill;
   }
 }
+
+

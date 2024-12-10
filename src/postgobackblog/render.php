@@ -6,15 +6,15 @@
 <div <?php echo get_block_wrapper_attributes(); ?>>
     <div class="post-goback-container">
         <a href="/">
-        <div class="post-goback-img-container post-goback-item">
-            <!-- <img src=<?php echo $attributes['bannerImage'] ?> > -->
-            <div class="back-button">
-                <a class="back-link">
-                    <span class="arrow"></span> <!-- Unicode 左箭头 -->
-                    <span class="text">Go Back</span>
-                </a>
+            <div class="post-goback-img-container post-goback-item">
+                <!-- <img src=<?php echo $attributes['bannerImage'] ?> > -->
+                <div class="back-button">
+                    <a class="back-link" href="/">
+                        <span class="arrow"></span> <!-- Unicode 左箭头 -->
+                        <span class="text">Go Back</span>
+                    </a>
+                </div>
             </div>
-        </div>
         </a>
     </div>
 </div>

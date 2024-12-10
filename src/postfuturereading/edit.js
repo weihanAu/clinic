@@ -1,5 +1,5 @@
 import { useState, useEffect } from '@wordpress/element';
-import { ComboboxControl, Spinner,__experimentalInputControl as InputControl  } from '@wordpress/components';
+import { ComboboxControl,TextControl, Spinner,__experimentalInputControl as InputControl  } from '@wordpress/components';
 import apiFetch from '@wordpress/api-fetch';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
@@ -9,6 +9,7 @@ export default function Edit({ attributes, setAttributes }) {
     const  post1  = attributes['post1'];
     const  post2  = attributes['post2'];
     const  post3  = attributes['post3'];
+    const [title,setTitle] = useState(attributes.title || '');
 
     const [posts, setPosts] = useState([]);
 	//post 1
@@ -46,6 +47,15 @@ export default function Edit({ attributes, setAttributes }) {
         <>
             <div {...useBlockProps()}>
                 <h2>future reading</h2>
+                <TextControl
+                    label={__("title", "copyright-date-block")}
+                    value={title}
+                    onChange={(value) => {
+                        setAttributes({ title: value });
+                        setTitle(value);
+                    }}
+                />
+
                 <div class="post_future_rd1">
                     <div>
                         {post1
