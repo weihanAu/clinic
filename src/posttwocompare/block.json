@@ -16,6 +16,14 @@
 		"bannerImage2": {
 			"type": "string",
 			"default": ""
+		},
+		"before": {
+			"type": "string",
+			"default": "before"
+		},
+		"after": {
+			"type": "string",
+			"default": "after"
 		}
 	},
 	"supports": {

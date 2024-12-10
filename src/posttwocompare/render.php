@@ -7,13 +7,13 @@
     <div class="post-image-compare">
         <div class="compare-img-container">
             <img src=<?php echo $attributes["bannerImage"] ?> alt="Before">
-            <div class="post-text">BEFORE</div>
+            <div class="post-text"><?php echo $attributes["before"] ?></div>
         </div>
 
         <div class="blurred compare-img-container after-image" id="after-image">
             <img class="blurred" src=<?php echo $attributes["bannerImage2"] ?> alt="After">
             <div class="after-image-text">Click to reveal</div>
-            <div class="post-text">AFTER</div>
+            <div class="post-text"><?php echo $attributes["after"] ?></div>
         </div>
       
     </div>

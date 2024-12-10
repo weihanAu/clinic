@@ -40,12 +40,31 @@ import { MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
 export default function Edit({ attributes, setAttributes }) {
 
 	const [imageUrl, setImageUrl] = useState(attributes.bannerImage || '');
-    const [imageUrl2, setImageUrl2] = useState(attributes.bannerImage || '');
+	const [imageUrl2, setImageUrl2] = useState(attributes.bannerImage || '');
+	const [before, setBefore] = useState(attributes.before || '');
+	const [after, setAfter] = useState(attributes.after || '');
+
 	return (
 		<>
 			<InspectorControls>
 				<PanelBody title={__("Settings", "go back block on single post page")}>
 					<MediaUploadCheck>
+						<TextControl
+							label={__("image1 text", "copyright-date-block")}
+							value={before}
+							onChange={(value) => {
+								setAttributes({ before: value });
+								setBefore(value);
+							}}
+						/>
+						<TextControl
+							label={__("image2 text", "copyright-date-block")}
+							value={after}
+							onChange={(value) => {
+								setAttributes({ after: value });
+								setAfter(value);
+							}}
+						/>
 						<MediaUpload
 							onSelect={ ( media ) =>{
 								setAttributes({bannerImage:media.url});
