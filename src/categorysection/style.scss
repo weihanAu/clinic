@@ -12,8 +12,8 @@ margin-bottom: 6rem;
 .wp-block-hudsonblock-categorysection .categories-container {
   display: grid;
   padding-bottom: 3rem;
-  grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr;
-  row-gap:10px;
+  grid-template-columns:  1fr 1fr 1fr 1fr;
+  gap:10px;
 }
 .categories-title {
   padding-top: 3rem;

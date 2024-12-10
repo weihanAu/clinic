@@ -1,5 +1,6 @@
 .wp-block-hudsonblock-postcompare{
-  margin-top: 3rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 
 .post-image-compare {
@@ -7,7 +8,8 @@
   justify-content: space-between;
   width: 100%; /* 控制整个容器的宽度 */
   margin: 0 auto; /* 居中容器 */
-  gap: 1rem;
+  gap: 4rem;
+  max-width: 80rem;
 }
 
 .post-image-compare div {
