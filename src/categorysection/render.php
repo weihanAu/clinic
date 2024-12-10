@@ -7,7 +7,12 @@
     <h2 class="categories-title">Categories</h2>
 	<div class="categories-container">
         <?php
-        $categories =get_categories(); 
+        wp_cache_delete('allcategory', 'categories');
+        $categories =get_categories(
+            array(
+                'hide_empty' => false
+            )
+        ); 
          foreach ($categories as $category) {
             $category_link = get_category_link($category->term_id);
             echo '<p class="categories-item"><a href="' . esc_url($category_link) . '">' . esc_html($category->name) . '</a></p>';

@@ -24,6 +24,10 @@
 		"smallTitle": {
 			"type": "string",
 			"default": ""
+		},
+		"hrf":{
+			"type": "string",
+			"default": ""
 		}
 	},
 	"supports": {

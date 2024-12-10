@@ -41,6 +41,7 @@ export default function Edit({ attributes, setAttributes }) {
 	 const [smallTitle,setBannersmallTitle] = useState(attributes.smallTitle || '');
 	 const [paragraph,setBannerparagraph] = useState(attributes.paragraph || '');
 	 const [video_url,setBannervideo_url] = useState(attributes.video_url || '');
+	 const [hrf,setHrf] = useState(attributes.hrf || '');
 
 	return (
 		<>
@@ -67,6 +68,14 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(value) => {
 							setAttributes({ paragraph: value });
 							setBannerparagraph(value);
+						}}
+					/>
+						<TextControl
+						label={__("more about url", "copyright-date-block")}
+						value={hrf}
+						onChange={(value) => {
+							setAttributes({ hrf: value });
+							setHrf(value);
 						}}
 					/>
 					<MediaUploadCheck>
