@@ -41,12 +41,21 @@ export default function Edit({ attributes, setAttributes }) {
 
 	const [imageUrl, setImageUrl] = useState(attributes["bannerImage"] || '');
 	const {content,setContent} = useState(attributes["content"]);
+	const [title,setTitle] = useState(attributes.title || '');
 
 	return (
 		<>
 			<div {...useBlockProps()}>
 				<h2>Dr Profile</h2>
 			<MediaUploadCheck>
+				<TextControl
+					label={__("Title", "copyright-date-block")}
+					value={title}
+					onChange={(value) => {
+						setAttributes({ title: value });
+						setTitle(value);
+					}}
+				/>
 				<MediaUpload
 					onSelect={ ( media ) =>{
 						setAttributes({bannerImage:media.url});

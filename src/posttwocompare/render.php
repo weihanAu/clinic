@@ -15,8 +15,11 @@
             <div class="after-image-text">Click to reveal</div>
             <div class="post-text"><?php echo $attributes["after"] ?></div>
         </div>
-      
     </div>
+    <p class='compare-text'>
+        DISCLAIMER: All before and after photographs are actual cases of Dr. Julian Liew, and are examples only.
+        All surgical results are subject to individual patient variability and do not constitute an implied or certainty for the result.
+  </p>
 </div>
 
 <script>

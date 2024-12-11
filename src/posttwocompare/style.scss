@@ -8,8 +8,9 @@
   justify-content: space-between;
   width: 100%; /* 控制整个容器的宽度 */
   margin: 0 auto; /* 居中容器 */
-  gap: 6rem;
+  gap: 16rem;
   max-width: 100rem;
+  position: relative;
 }
 
 .post-image-compare div {
@@ -52,5 +53,13 @@ img.blurred {
 .post-image-compare .post-text{
   text-align: center;
   padding: 0;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+
+.wp-block-hudsonblock-postcompare .compare-text {
+  text-align: center;
+  max-width: 50rem;
+  margin: auto;
+  margin-top: 8rem;
 }

@@ -16,6 +16,10 @@
 		"content":{
 			"type": "string",
 			"default":""
+		},
+		"title": {
+			"type": "string",
+			"default": "CUSTOM TITLE CUSTOM TITLE CUSTOM TITLE CUSTOM TITLE"
 		}
 	},
 	"supports": {

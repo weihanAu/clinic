@@ -1,5 +1,4 @@
 .wp-block-hudsonblock-postdrprofile{
-  margin-top: 6em;
   margin-bottom: 6em; 
 }
 .dr-profile {
@@ -45,6 +44,8 @@
 .dr-profile .image-container{
   flex: 1;
   min-width: 330px;
+  aspect-ratio: 7/8;
+  width: 100%;
 }
 .dr-profile .profile-content{
   flex: 3;
