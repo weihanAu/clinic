@@ -75,7 +75,7 @@
 }
 
 .fa-sub{
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   position: relative;
   top: -6px;
   color: #333 !important;
@@ -94,8 +94,11 @@
   background-color: transparent !important;
   align-items: flex-start;
   flex-direction: column !important;
+  gap: 1rem;
 }
-
+.link-hero__content_custom h2, .link-hero__content_custom h3{
+  margin: 0;
+}
 .link-hero__image-full-width{
   width: 100% !important;
 }

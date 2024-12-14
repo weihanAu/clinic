@@ -33,3 +33,12 @@
 .reading-item a:hover {
   text-decoration: underline;
 }
+
+@media screen and (max-width: 500px) {
+  .reading-section .reading-title{
+    font-size: 2.4rem;
+  }
+  .reading-item a{
+    font-size: 2rem !important
+  }
+}

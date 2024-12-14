@@ -33,6 +33,9 @@ margin-bottom: 6rem;
 .load-more{
   display: none;
 }
+.wp-block-hudsonblock-categorysection .categories-container.small-dev{
+  display: none;
+}
 
 @media(max-width:800px) {
  .big-dev{
@@ -40,6 +43,7 @@ margin-bottom: 6rem;
  }
  .wp-block-hudsonblock-categorysection .categories-container.small-dev{
   grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
  }
  .load-more {
    display: block;
