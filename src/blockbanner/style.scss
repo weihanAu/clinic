@@ -5,3 +5,12 @@
  * Replace them with your own styles or remove the file completely.
  */
 
+.wp-block-hudsonblock-blogbanners img.procedure-hero__content__swirl{
+  height:calc(100% + 10rem);
+  width:auto;
+  margin:0;
+};
+
+.wp-block-hudsonblock-blogbanners .procedure-hero__image img{
+  margin: 0;
+}

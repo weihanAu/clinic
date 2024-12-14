@@ -12,7 +12,7 @@ margin-bottom: 6rem;
 .wp-block-hudsonblock-categorysection .categories-container {
   display: grid;
   padding-bottom: 3rem;
-  grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr;
   gap:10px;
 }
 .wp-block-hudsonblock-categorysection .categories-item{
@@ -30,20 +30,22 @@ margin-bottom: 6rem;
 .wp-block-hudsonblock-categorysection .categories-item a{
   font-weight: 500 !important;
 }
+.load-more{
+  display: none;
+}
+
 @media(max-width:800px) {
-  .wp-block-hudsonblock-categorysection .categories-title{
-    margin-top: 0 !important;
-    padding: 1rem 0 !important;
-  }
-  .wp-block-hudsonblock-categorysection .categories-item{
-    padding-bottom: 1rem;
-  }
-  .wp-block-hudsonblock-categorysection .categories-container{
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 1rem;
-  }
-  .wp-block-hudsonblock-categorysection .categories-title {
-    font-size: 3.4rem !important;
-  }
+ .big-dev{
+  display: none !important;
+ }
+ .wp-block-hudsonblock-categorysection .categories-container.small-dev{
+  grid-template-columns: 1fr 1fr 1fr;
+ }
+ .load-more {
+   display: block;
+   padding-bottom: 1rem;
+ }
+ .wp-block-hudsonblock-categorysection .hidden-category{
+  display: none;
+ }
 }

@@ -59,7 +59,13 @@ img.blurred {
 
 .wp-block-hudsonblock-postcompare .compare-text {
   text-align: center;
-  max-width: 50rem;
+  max-width: 100rem;
   margin: auto;
   margin-top: 8rem;
+}
+
+@media(max-width:800px) {
+  .post-image-compare {
+    gap: 1rem;
+  }
 }

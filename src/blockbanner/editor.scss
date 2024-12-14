@@ -1,3 +1,7 @@
 .wp-block-blogbanners-blogbanners {
 	border: 1px dotted #f00;
 }
+
+.wp-block-blogbanners-blogbanners .image-preview img{
+	max-width: 200px;
+}

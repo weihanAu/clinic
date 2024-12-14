@@ -21,5 +21,5 @@
  */
 import { store } from "@wordpress/interactivity";
 /* eslint-disable no-console */
-console.log("Hello World! (from categorysection-categorysection block)");
 /* eslint-enable no-console */
+
