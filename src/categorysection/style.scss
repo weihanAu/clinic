@@ -5,7 +5,7 @@
  * Replace them with your own styles or remove the file completely.
  */
 .wp-block-hudsonblock-categorysection{
-text-align: center;
+text-align: center !important;
 background-color: #FBCDB3;
 margin-bottom: 6rem;
 }
@@ -35,6 +35,9 @@ margin-bottom: 6rem;
 }
 .wp-block-hudsonblock-categorysection .categories-container.small-dev{
   display: none;
+}
+p#view-more-btn,.wp-block-hudsonblock-categorysection p.categories-item.small-dev{
+  text-align: center;
 }
 
 @media(max-width:800px) {

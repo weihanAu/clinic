@@ -18,7 +18,7 @@
   font-size: 4rem;
   color: #333;
   margin-top: 0;
-  margin-bottom: 3rem;
+  margin-bottom: 3rem !important;
 }
 .dr-profile p {
   margin: 0.5em 0;
@@ -52,7 +52,9 @@
   font-size: 1.6rem;
   line-height: 2.4rem;
   font-weight: 400;
-  margin-bottom: 3.3rem; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .post-template-default .blog-content .gb-container p{
   margin-bottom: 0 !important;
@@ -76,6 +78,9 @@
     padding-right: 20px;
     padding-bottom: 20px;
   }
+  .dr-profile .profile-content {
+    display: block;
+  }
 }
 
 @media screen and (max-width:769px) {
@@ -85,6 +90,9 @@
   }
   .profile-content-img{
     position: relative;
+  }
+  .dr-profile .profile-content {
+    display: block;
   }
 }
 
