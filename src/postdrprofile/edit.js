@@ -69,6 +69,7 @@ export default function Edit({ attributes, setAttributes }) {
 					) }
 				/>
 				</MediaUploadCheck>
+				<span class="color:red">image size:  3:4</span>
 				<RichText
 					tagName="p" // The tag here is the element output and editable in the admin
 					value={ attributes["content"]  } // Any existing content, either from the database or an attribute default

@@ -95,7 +95,6 @@ export default function Edit({ attributes, setAttributes }) {
 								) }
 							/>
 					</MediaUploadCheck>
-					<span class="color:red">image size:  4:3</span>
 			</div>
 		</>
 	);

@@ -18,11 +18,12 @@
 }
 
 .post-image-compare img {
-  width: 100% !important; /* 图片占据它所在div的全部宽度 */
-  height: 100% !important;
+  // width: 100% !important; /* 图片占据它所在div的全部宽度 */
+  // height: 100% !important;
   margin: 0 !important;
   transition: filter 0.5s ease; /* 在图片上应用模糊过渡 */
   object-fit: fill;
+  aspect-ratio: 435/526;
 }
 
 .compare-img-container{
