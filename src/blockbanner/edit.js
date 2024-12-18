@@ -79,7 +79,7 @@ export default function Edit({ attributes, setAttributes }) {
 							) }
 						/>
 					</MediaUploadCheck>
-					 
+					 <span class="color:red">iamge: 16:9</span>
 				</PanelBody>
 			</InspectorControls>
 			<div {...useBlockProps()}>
@@ -93,4 +93,5 @@ export default function Edit({ attributes, setAttributes }) {
 			</div>
 		</>
 	);
+	
 }

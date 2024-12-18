@@ -81,23 +81,24 @@
   color: #333 !important;
 }
 
-.wp-block-hudsonblock-postqadrliew .fa.fa-youtube-play{
-  margin-top: 0.5em;
-}
+// .wp-block-hudsonblock-postqadrliew .fa.fa-youtube-play{
+//   margin-top: 0.5em;
+// }
 
 .link-hero__content_custom{
   position: relative;
   width: 100% !important;
-  padding: 7.5vw !important;
+  padding: 1rem 7.5vw !important;
   display:flex !important;
-  justify-content: space-evenly !important;
+  justify-content: center !important;
   background-color: transparent !important;
   align-items: flex-start;
   flex-direction: column !important;
-  gap: 1rem;
+  gap: 2rem;
 }
 .link-hero__content_custom h2, .link-hero__content_custom h3{
   margin: 0 !important;
+  text-align: start;
 }
 .link-hero__image-full-width{
   width: 100% !important;

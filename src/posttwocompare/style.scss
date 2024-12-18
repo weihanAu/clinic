@@ -36,7 +36,7 @@ img.blurred {
 /* 文本始终显示 */
 .post-image-compare .after-image-text {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -62,6 +62,11 @@ img.blurred {
   max-width: 100rem;
   margin: auto;
   margin-top: 8rem;
+}
+
+.wp-block-hudsonblock-postcompare .compare-text span{
+      display: inline-block;
+      width: 100%;
 }
 
 @media(max-width:800px) {

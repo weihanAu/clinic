@@ -42,12 +42,30 @@ export default function Edit({ attributes, setAttributes }) {
 	const currentYear = new Date().getFullYear().toString();
 	const [imageUrl, setImageUrl] = useState(attributes.bannerImage || '');
 	const [bannerTitle,setBannerTitle] = useState(attributes.bannerTitle || '');
+	const [bannerText,setBannerText] = useState(attributes.bannerText || '');
 
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={__("Settings", "go back block on single post page")}>
-					{/* <MediaUploadCheck>
+				<PanelBody title={__("Settings", "copyright-date-block")}>
+					<TextControl
+						label={__("Banner Title", "copyright-date-block")}
+						value={bannerTitle}
+						onChange={(value) => {
+							setAttributes({ bannerTitle: value });
+							setBannerTitle(value);
+						}}
+					/>
+					<TextControl
+						label={__("Banner Text", "copyright-date-block")}
+						value={bannerText}
+						onChange={(value) => {
+							setAttributes({ bannerText: value });
+							setBannerText(value);
+						}}
+					/>
+					
+					<MediaUploadCheck>
 						<MediaUpload
 							onSelect={ ( media ) =>{
 								setAttributes({bannerImage:media.url});
@@ -60,14 +78,16 @@ export default function Edit({ attributes, setAttributes }) {
 								<Button onClick={ open }><button>Open Media Library</button></Button>
 							) }
 						/>
-					</MediaUploadCheck> */}
+					</MediaUploadCheck>
+					 
 				</PanelBody>
 			</InspectorControls>
 			<div {...useBlockProps()}>
-				<p>this is the goback button</p>
+				<p>please enter title and upload images for banner 
+				in the right section</p>
 				{imageUrl && (
 					<div className="image-preview">
-						<img src={imageUrl} alt="Uploaded Image" width={"150px"}/>
+						<img src={imageUrl} alt="Uploaded Image" />
 					</div>
                )}
 			</div>

@@ -5,8 +5,9 @@
 ?>
 <div  <?php echo get_block_wrapper_attributes(); ?>>
     <div class="post-image-compare">
-        <div class="compare-img-container">
-            <img src=<?php echo $attributes["bannerImage"] ?> alt="Before">
+        <div class="compare-img-container blurred after-image">
+            <img  class="blurred" src=<?php echo $attributes["bannerImage"] ?> alt="Before">
+            <div class="after-image-text">Click to reveal</div>
             <div class="post-text"><?php echo $attributes["before"] ?></div>
         </div>
 
@@ -17,8 +18,10 @@
         </div>
     </div>
     <p class='compare-text'>
-        DISCLAIMER: All before and after photographs are actual cases of Dr. Julian Liew, and are examples only.
-        All surgical results are subject to individual patient variability and do not constitute an implied or certainty for the result.
+        <span>DISCLAIMER: All before and after photographs are actual cases of Dr. Julian Liew, and are examples only.</span>
+        <span>All surgical results are subject to individual patient 
+          variability and do not constitute an implied or certainty for the result.
+        </span> 
   </p>
 </div>
 

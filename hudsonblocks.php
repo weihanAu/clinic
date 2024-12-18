@@ -26,6 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function hudsonblocks_hudsonblocks_block_init() {
 	register_block_type( __DIR__ . '/build/blockbanner' );
+	// register_block_type( __DIR__ . '/build/blogbanner' );
 	register_block_type( __DIR__ . '/build/secondblock' );
 	register_block_type( __DIR__ . '/build/categorysection' );
 	register_block_type( __DIR__ . '/build/popularposts' );

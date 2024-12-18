@@ -94,8 +94,8 @@ export default function Edit({ attributes, setAttributes }) {
 									<button onClick={ open }>Open Media Library</button>
 								) }
 							/>
-				</MediaUploadCheck>
-
+					</MediaUploadCheck>
+					<span class="color:red">image size:  4:3</span>
 			</div>
 		</>
 	);

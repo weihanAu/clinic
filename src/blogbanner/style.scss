@@ -1,0 +1,33 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-hudsonblock-blogbanners img.procedure-hero__content__swirl {
+  height: calc(100% + 10rem);
+  width: auto;
+  margin: 0;
+}
+
+;
+
+.wp-block-hudsonblock-blogbanners .procedure-hero__image img {
+  margin: 0;
+}
+
+.wp-block-hudsonblock-blogbanners .procedure-hero__content__container {
+  height: 100px;
+}
+
+@media (min-width: 1000px) {
+  .single-post .procedure-hero__content {
+    position: relative;
+  }
+
+  .single-post .wp-block-hudsonblock-blogbanners .cta {
+    position: absolute;
+    bottom: 0;
+  }
+}

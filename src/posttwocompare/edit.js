@@ -77,6 +77,7 @@ export default function Edit({ attributes, setAttributes }) {
 								<Button onClick={ open }><button>Open Media Library</button></Button>
 							) }
 						/>
+						<span class="color:red">image size: 1:1</span>
 						<MediaUpload
 							onSelect={ ( media ) =>{
 								setAttributes({bannerImage2:media.url});
@@ -89,6 +90,7 @@ export default function Edit({ attributes, setAttributes }) {
 								<Button onClick={ open }><button>Open Media Library</button></Button>
 							) }
 						/>
+						<span class="color:red">image size:  1:1</span>
 					</MediaUploadCheck>
 				</PanelBody>
 			</InspectorControls>
