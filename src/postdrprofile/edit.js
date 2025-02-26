@@ -40,8 +40,8 @@ import { MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
 export default function Edit({ attributes, setAttributes }) {
 
 	const [imageUrl, setImageUrl] = useState(attributes["bannerImage"] || '');
-	const {content,setContent} = useState(attributes["content"]);
-	const [title,setTitle] = useState(attributes.title || '');
+	const {content,setContent} = useState(decodeEntities(attributes["content"]));
+	const [title,setTitle] = useState(decodeEntities(attributes.title) || '');
 
 	return (
 		<>
@@ -50,7 +50,7 @@ export default function Edit({ attributes, setAttributes }) {
 			<MediaUploadCheck>
 				<TextControl
 					label={__("Title", "copyright-date-block")}
-					value={title}
+					value={decodeEntities(title)}
 					onChange={(value) => {
 						setAttributes({ title: value });
 						setTitle(value);
@@ -72,7 +72,7 @@ export default function Edit({ attributes, setAttributes }) {
 				<span class="color:red">image size:  3:4</span>
 				<RichText
 					tagName="p" // The tag here is the element output and editable in the admin
-					value={ attributes["content"]  } // Any existing content, either from the database or an attribute default
+					value={ decodeEntities(attributes["content"])  } // Any existing content, either from the database or an attribute default
 					allowedFormats={ [ 'core/bold', 'core/italic' ] } // Allow the content to be made bold or italic, but do not allow other formatting options
 					onChange={ ( content ) => {setAttributes({content:content}) }} // Store updated content as a block attribute
 					placeholder={ __( 'intro...' ) } // Display this text before any content has been added by the user
@@ -81,3 +81,13 @@ export default function Edit({ attributes, setAttributes }) {
 		</>
 	);
 }
+
+function decodeEntities(content) {
+    // 替换 u003cbru003e 为 <br>
+    content = content.replace(/u003cbru003e/g, '<br>');
+    
+    // 替换 u0026 为 &
+    content = content.replace(/u0026/g, '&');
+    
+    return content;
+}      
