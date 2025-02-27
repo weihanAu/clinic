@@ -71,14 +71,14 @@ export default function Edit({ attributes, setAttributes }) {
 						}}
 					/>
 						<TextControl
-						label={__("more about url", "copyright-date-block")}
-						value={hrf}
-						onChange={(value) => {
-							setAttributes({ hrf: value });
-							setHrf(value);
-						}}
-					/>
-					<MediaUploadCheck>
+							label={__("more about url", "copyright-date-block")}
+							value={hrf}
+							onChange={(value) => {
+								setAttributes({ hrf: value });
+								setHrf(value);
+							}}
+						/>
+					{/* <MediaUploadCheck>
 						<div>please select video</div>
 						<video width="320" height="240" controls>
 							  <source src={video_url} type="video/mp4" />
@@ -94,7 +94,15 @@ export default function Edit({ attributes, setAttributes }) {
 									<button onClick={ open }>Open Media Library</button>
 								) }
 							/>
-					</MediaUploadCheck>
+					</MediaUploadCheck> */}
+					<TextControl
+							label={__("enter presto video id", "copyright-date-block")}
+							value={video_url}
+							onChange={(value) => {
+								setAttributes({ video_url: value });
+								setBannervideo_url(value);
+							}}
+						/>
 			</div>
 		</>
 	);
