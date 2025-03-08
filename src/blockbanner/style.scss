@@ -31,7 +31,11 @@
       position: absolute;
       bottom: 0;
    }
-   .single-post .wp-block-hudsonblock-blogbanners .procedure-hero__content__container {
-    height: auto;
-  }
+}
+
+@media (max-width:1000px) {
+  
+  .single-post .wp-block-hudsonblock-blogbanners .procedure-hero__content__container {
+      height: auto;
+    }
 }

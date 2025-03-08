@@ -31,7 +31,7 @@
         ); 
         foreach ($categories as $index => $category) {
             $category_link = get_category_link($category->term_id);
-            $class = $index >= 6 ? 'hidden-category' : '';
+            $class = $index >= 3 ? 'hidden-category' : '';
             if($category->name=='Mostpopular'){continue;}
             echo '<p class="categories-item small-dev ' . $class . '"><a href="' . esc_url($category_link) . '">' . esc_html($category->name) . '</a></p>';
         }

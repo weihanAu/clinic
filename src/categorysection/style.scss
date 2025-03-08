@@ -49,8 +49,11 @@ margin-bottom: 6rem;
   display: none !important;
  }
  .wp-block-hudsonblock-categorysection .categories-container.small-dev{
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   display: grid;
+ }
+ .wp-block-hudsonblock-categorysection .categories-item.small-dev{
+  text-align: center;
  }
  .load-more {
    display: block;
