@@ -35,14 +35,14 @@
     const container = document.querySelector('.wp-block-hudsonblock-blogbanners .procedure-hero__content__container');
     const content = document.getElementById('baner-text-content');
 
-    let fontSize = 70; // 初始字体大小
-    content.style.fontSize = fontSize + 'px';
+    let fontSize = 5; // 初始字体大小
+    content.style.fontSize = fontSize + 'vw';
         console.log(container)
     // 动态调整字体，直到文本完全适配容器
-    while ((content.scrollWidth > container.clientWidth || content.scrollHeight > container.clientHeight) && fontSize > 10) {
-      fontSize -= 1;
-      content.style.fontSize = fontSize + 'px';
-    }
+    // while ((content.scrollWidth > container.clientWidth || content.scrollHeight > container.clientHeight) && fontSize > 10) {
+    //   fontSize -= 1;
+    //   content.style.fontSize = fontSize + 'px';
+    // }
   };
 
   // 初始化字体大小调整
