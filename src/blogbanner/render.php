@@ -30,7 +30,7 @@
         </div>
     </section>
 </div>
-<script>
+<!-- <script>
     const adjustFontSize = () => {
     const container = document.querySelector('.wp-block-hudsonblock-blogbanners .procedure-hero__content__container');
     const content = document.getElementById('baner-text-content');
@@ -50,4 +50,4 @@
 
   // 可选：实时监听用户输入
   window.addEventListener('resize', adjustFontSize);
-</script>
+</script> -->

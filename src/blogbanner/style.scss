@@ -21,6 +21,10 @@
   height: 100px;
 }
 
+.wp-block-hudsonblock-blogbanners .procedure-hero__headline{
+  font-size: clamp(25px, 5vw, 60px);;
+}
+
 @media (min-width: 1000px) {
   .single-post .procedure-hero__content {
     position: relative;
