@@ -116,6 +116,10 @@
     .link-hero{
       display: flex;
     }
+    .link-hero__image.link-hero__image-full-width{
+      max-width: 500px;
+      margin: auto;
+    }
   }
 
 @media screen and (max-width: 768px) {
