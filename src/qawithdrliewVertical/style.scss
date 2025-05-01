@@ -1,0 +1,153 @@
+
+.wp-block-hudsonblock-postqadrliewvertical {
+  background-color: #fbcdb3;
+  margin: 6em -7.5vw;
+  margin-bottom: 0;
+  width: calc(100% + 15vw);
+  box-sizing: border-box;
+}
+
+/* Main container */
+.qa-container {
+  font-size: 1.6em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+/* Left side: Text content */
+.left-item {
+  flex-basis: 55%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.wp-block-hudsonblock-postqadrliewvertical .left-item h2 {
+  font-size: 2.4rem;
+  color: #333;
+}
+
+.wp-block-hudsonblock-postqadrliewvertical .left-item h3 {
+  font-size: 3.4rem;
+  color: #333333;
+}
+
+.wp-block-hudsonblock-postqadrliewvertical .left-item p {
+  margin-bottom: 6rem;
+  color: #333;
+}
+
+.wp-block-hudsonblock-postqadrliewvertical .left-item p {
+  margin: 0 !important;
+  text-align: justify;
+}
+
+.left-item .ma {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #333333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Right side: YouTube video */
+.right-item {
+  flex-basis: 45%;
+  position: relative;
+}
+
+/* Responsive YouTube video with a 16:9 aspect ratio */
+.iframe-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.fa-sub {
+  font-size: 1.6rem;
+  position: relative;
+  top: -6px;
+  color: #333 !important;
+}
+
+// .wp-block-hudsonblock-postqadrliewvertical .fa.fa-youtube-play{
+//   margin-top: 0.5em;
+// }
+
+.link-hero__content_custom {
+  position: relative;
+  width: 100% !important;
+  padding: 1rem 7.5vw !important;
+  display: flex !important;
+  justify-content: center !important;
+  background-color: transparent !important;
+  align-items: flex-start;
+  flex-direction: column !important;
+  gap: 2rem;
+}
+
+.link-hero__content_custom h2,
+.link-hero__content_custom h3 {
+  margin: 0 !important;
+  text-align: start;
+}
+
+.link-hero__image-full-width {
+  width: 100% !important;
+}
+
+
+/* Responsive Design */
+  @media screen and (max-width:1550px) {
+    .link-hero{
+      display: flex;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+  // .qa-container {
+  //   flex-direction: column;
+  // }
+
+  .left-item,
+  .right-item {
+    flex-basis: 100%;
+    /* Ensure both sections take full width */
+    margin-bottom: 20px;
+  }
+
+  .right-item {
+    padding: 0;
+    /* Remove padding to avoid unnecessary space */
+    min-height: 10em;
+    width: 100%;
+  }
+
+  .wp-block-hudsonblock-postqadrliewvertical .left-item p {
+    margin: 0;
+  }
+
+}
+
+@media (min-width: 800px) {
+ .vertical .link-hero__content.left-item {
+  flex:2;
+ }
+ .vertical .link-hero__image.link-hero__image-full-width{
+  flex:1;
+ }
+}

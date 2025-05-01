@@ -37,6 +37,7 @@ function hudsonblocks_hudsonblocks_block_init() {
 	register_block_type( __DIR__ . '/build/postquote' );
 	register_block_type( __DIR__ . '/build/postfuturereading' );
 	register_block_type( __DIR__ . '/build/postdrprofile' );
+	register_block_type( __DIR__ . '/build/qawithdrliewVertical' );
 }
 add_action( 'init', 'hudsonblocks_hudsonblocks_block_init' );
 
