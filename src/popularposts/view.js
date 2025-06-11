@@ -22,9 +22,32 @@
 
 /* eslint-disable no-console */
 /* eslint-enable no-console */
-jQuery(document).ready(function($) {
+// jQuery(document).ready(function($) {
+//     $('.slides').slick({
+//         slidesToShow: 2,
+//         slidesToScroll: 2,
+//     });
+// });
+
+// jQuery(document).ready(function ($) {
+//     $('.slides').slick({
+//         slidesToShow: 1,
+//         slidesToScroll: 1,
+//     });
+// });
+
+jQuery(document).ready(function ($) {
     $('.slides').slick({
         slidesToShow: 2,
         slidesToScroll: 2,
+        responsive: [
+            {
+                breakpoint: 768, // 当屏幕宽度小于768px时应用下面设置
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 });

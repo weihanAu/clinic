@@ -50,8 +50,9 @@
 .wp-block-hudsonblock-blogposts .blog-posts-thumbnail img {
   width: 100%; /* Responsive image */
   height: auto; /* Maintain aspect ratio */
-  aspect-ratio: 4 / 3;
-  object-fit:cover;
+  // aspect-ratio: 4 / 3;
+  object-fit:contain;
+  
 }
 
 .blog-posts-headline,.blog-posts-category {
