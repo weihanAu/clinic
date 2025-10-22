@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "hudsonblock/meetus",
+	"version": "0.1.0",
+	"title": "meetus",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"attributes": {
+		"title1": {
+			"type": "string",
+			"default": ""
+		},
+		"title2": {
+			"type": "string",
+			"default": ""
+		},
+		"imageUrl1": {
+			"type": "string",
+			"default": ""
+		},
+		"imageUrl2": {
+			"type": "string",
+			"default": ""
+		},
+		"wysiwygContent": {
+			"type": "string",
+			"default": ""
+		},
+		"wysiwygContent2": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false,
+		"typography": {
+			"fontSize": true
+		}
+	},
+	"textdomain": "meetus",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

@@ -1,0 +1,106 @@
+
+.specialist-section {
+  padding: 40px 20px;
+  background-color: #4a4a4a;
+  margin: 0 auto;
+  color:white;
+  font-size: 16px;
+}
+
+.specialist-section h2 {
+  text-align: start;
+  font-size: 2em;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  font-weight: normal;
+}
+
+.surgeon-profile {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.profile-card {
+  background-color: transparent;
+  /* Slightly lighter gray for cards */
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.profile-image {
+  min-width: 400px;
+  height: 400px;
+  object-fit: fill;
+}
+
+.profile-details h3 {
+  font-size: 1.5em;
+}
+
+.profile-details p {
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+
+.view-profile-btn {
+  background-color: #ffffff;
+  color: #4a4a4a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.view-profile-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.profile-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile-content .btn-container{
+  text-align: end;
+}
+
+@media (max-width: 768px) {
+  .surgeon-profile {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .surgeon-profile p{
+    display: -webkit-box;
+      /* Required for -webkit-line-clamp */
+      -webkit-box-orient: vertical;
+      /* Required for -webkit-line-clamp */
+      overflow: hidden;
+      /* Hide overflowing text */
+      -webkit-line-clamp: 1;
+      /* Limit to 1 line */
+  }
+  .profile-card{
+    flex-direction: column;
+  }
+  .profile-image{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+  }
+  .surgeon-profile .btn-container button{
+    background-color: #4a4a4a;
+    color: white;
+    text-decoration: solid underline;
+  }
+}

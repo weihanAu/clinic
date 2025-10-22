@@ -1,0 +1,140 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-hudsonblock-popularposts .popularposts-container {
+  text-align: center;
+  padding: 0 35px 0 35px;
+}
+.Julian-works-container .Julian-title{
+  text-align: left;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.wp-block-hudsonblock-popularposts .slides {
+  position: relative;
+}
+
+.wp-block-hudsonblock-popularposts .slide-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px;
+  max-width: 40em;
+  margin: auto;
+}
+
+.wp-block-hudsonblock-popularposts .slide-item p {
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.wp-block-hudsonblock-popularposts .slide-item a .thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  border-radius: 50%;
+  border: none;
+  background-color: #FBCDB3;
+}
+
+.slick-prev {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.slick-next {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.thumbnail {
+  width: 100%
+}
+
+.headline {
+  width: 100%;
+  font-size: 24px;
+  margin-bottom: .5em;
+  text-align: left;
+}
+
+.abstract {
+  width: 100%;
+  font-size: 16px;
+}
+
+.wp-block-hudsonblock-popularposts h2 {
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.wp-block-hudsonblock-popularposts .Julian-works-container .slide-item a .thumbnail img{
+  aspect-ratio: 4/5;
+}
+.wp-block-hudsonblock-popularposts .Julian-works-container .slide-item a{
+  padding: 0 200px;
+}
+
+.post-operation h2 {
+  font-weight: bold;
+  font-size: 14px !important;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.details {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+
+.disclaimer {
+  font-size: 10px;
+  color: #777;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+@media (max-width:800px) {
+  .wp-block-hudsonblock-popularposts .abstract p {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    /* Limits to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.4rem;
+    letter-spacing: 0;
+    text-align: start;
+  }
+
+  .wp-block-hudsonblock-popularposts .headline {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .wp-block-hudsonblock-popularposts .popularposts-container {
+    padding: 2rem 7.5vw !important;
+  }
+
+  .wp-block-hudsonblock-popularposts .popularposts-title {
+    font-size: 3.4rem;
+  }
+}
