@@ -17,6 +17,14 @@
 			"type": "string",
 			"default": ""
 		},
+		"link1": {
+			"type": "string",
+			"default": ""
+		},
+		"link2": {
+			"type": "string",
+			"default": ""
+		},
 		"imageUrl1": {
 			"type": "string",
 			"default": ""

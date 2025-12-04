@@ -1,24 +1,23 @@
 
 .specialist-section {
   padding: 40px 20px;
-  background-color: #4a4a4a;
   margin: 0 auto;
-  color:white;
   font-size: 16px;
+      font-family: 'assistant';
+        letter-spacing: 0.05rem;
 }
 
 .specialist-section h2 {
-  text-align: start;
-  font-size: 2em;
+  text-align: center;
+  font-size: 3em;
   margin-bottom: 30px;
   margin-left: 30px;
-  font-weight: normal;
+  font-weight: bolder;
 }
 
 .surgeon-profile {
   display: flex;
   justify-content: space-around;
-  flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
@@ -28,16 +27,16 @@
   background-color: transparent;
   /* Slightly lighter gray for cards */
   overflow: hidden;
-  display: flex;
   align-items: stretch;
-  justify-content: space-around;
-  gap: 20px;
+  flex: 1;
 }
 
 .profile-image {
-  min-width: 400px;
-  height: 400px;
-  object-fit: fill;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+    /* 保持正方形 */
+  object-fit: cover;
+  /* 裁切以填满框 */
 }
 
 .profile-details h3 {
@@ -72,8 +71,15 @@
 }
 
 .profile-content .btn-container{
-  text-align: end;
+  text-align: start;
 }
+
+ .surgeon-profile .btn-container button{
+   background-color: #FBCDB3;
+   color: white;
+   text-decoration: none;
+  text-transform: uppercase;
+ }
 
 @media (max-width: 768px) {
   .surgeon-profile {
@@ -97,10 +103,5 @@
     width: 100%;
     aspect-ratio: 1 / 1;
     height: auto;
-  }
-  .surgeon-profile .btn-container button{
-    background-color: #4a4a4a;
-    color: white;
-    text-decoration: solid underline;
   }
 }

@@ -15,7 +15,9 @@
                      <p><?php echo $attributes["wysiwygContent"]?></p>
                   </div>
                   <div class="btn-container">
-                   <button class="view-profile-btn">View Profile</button>
+                   <a href="<?php echo esc_url( $attributes['link1'] ); ?>">
+                      <button class="view-profile-btn">read more</button>
+</a>
                   </div>  
                 </div>
             </div>
@@ -27,7 +29,9 @@
                     <p><?php echo $attributes["wysiwygContent2"]?></p>
                   </div>
                   <div class="btn-container">
-                   <button class="view-profile-btn">View Profile</button>
+                    <a href="<?php echo esc_url( $attributes['link2'] ); ?>">
+                      <button  class="view-profile-btn">read more</button>
+</a>
                   </div>  
                 </div>
             </div>

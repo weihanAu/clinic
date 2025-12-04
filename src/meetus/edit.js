@@ -44,6 +44,8 @@ export default function Edit({ attributes, setAttributes }) {
 	const [imageUrl2, setImageUrl2] = useState(attributes.imageUrl2 || '');
 	const [wysiwygContent, setWysiwygContent] = useState(attributes.wysiwygContent || '');
 	const [wysiwygContent2, setWysiwygContent2] = useState(attributes.wysiwygContent2 || '');
+	const [link1, setBannerlink1] = useState(attributes.link1 || '');
+	const [link2, setBannerlink2] = useState(attributes.link2 || '');
 	return (
 		<>
 			<div {...useBlockProps()}>
@@ -61,6 +63,22 @@ export default function Edit({ attributes, setAttributes }) {
 					onChange={(value) => {
 						setAttributes({ title2: value });
 						setBannertitle2(value);
+					}}
+				/>
+				<TextControl
+					label={__("link1", "copyright-date-block")}
+					value={link1}
+					onChange={(value) => {
+						setAttributes({ link1: value });
+						setBannerlink1(value);
+					}}
+				/>
+				<TextControl
+					label={__("link2", "copyright-date-block")}
+					value={link2}
+					onChange={(value) => {
+						setAttributes({ link2: value });
+						setBannerlink2(value);
 					}}
 				/>
 				<MediaUploadCheck>
