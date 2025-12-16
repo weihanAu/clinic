@@ -19,8 +19,8 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+  gap: 3em;
+  padding: 3em;
 }
 
 .profile-card {
@@ -40,13 +40,18 @@
 }
 
 .profile-details h3 {
-  font-size: 1.5em;
+  font-size: 3rem;
+}
+
+.profile-details em {
+  font-weight: 200;
 }
 
 .profile-details p {
-  font-size: 0.9em;
-  line-height: 1.5;
-  margin: 0 0 20px;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
 }
 
 .view-profile-btn {
