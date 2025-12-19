@@ -45,6 +45,61 @@ export default function Edit({ attributes, setAttributes }) {
 				<h2>
 					julian liews work
 				</h2>
+				<MediaUploadCheck>
+					<MediaUpload
+						onSelect={(media) => setAttributes({ imageUrl1: media.url })}
+						allowedTypes={['image']}
+						render={({ open }) => (
+							<Button onClick={open} isPrimary>
+								{attributes.imageUrl1 ? __('Change Image', 'text-domain') : __('Upload Image', 'text-domain')}
+							</Button>
+						)}
+					/>
+				</MediaUploadCheck>
+				<MediaUploadCheck>
+					<MediaUpload
+						onSelect={(media) => setAttributes({ imageUrl2: media.url })}
+						allowedTypes={['image']}
+						render={({ open }) => (
+							<Button onClick={open} isPrimary>
+								{attributes.imageUrl1 ? __('Change Image', 'text-domain') : __('Upload Image', 'text-domain')}
+							</Button>
+						)}
+					/>
+				</MediaUploadCheck>
+				<MediaUploadCheck>
+					<MediaUpload
+						onSelect={(media) => setAttributes({ imageUrl3: media.url })}
+						allowedTypes={['image']}
+						render={({ open }) => (
+							<Button onClick={open} isPrimary>
+								{attributes.imageUrl1 ? __('Change Image', 'text-domain') : __('Upload Image', 'text-domain')}
+							</Button>
+						)}
+					/>
+				</MediaUploadCheck>
+				<MediaUploadCheck>
+					<MediaUpload
+						onSelect={(media) => setAttributes({ imageUrl4: media.url })}
+						allowedTypes={['image']}
+						render={({ open }) => (
+							<Button onClick={open} isPrimary>
+								{attributes.imageUrl1 ? __('Change Image', 'text-domain') : __('Upload Image', 'text-domain')}
+							</Button>
+						)}
+					/>
+				</MediaUploadCheck>
+				<MediaUploadCheck>
+					<MediaUpload
+						onSelect={(media) => setAttributes({ imageUrl5: media.url })}
+						allowedTypes={['image']}
+						render={({ open }) => (
+							<Button onClick={open} isPrimary>
+								{attributes.imageUrl1 ? __('Change Image', 'text-domain') : __('Upload Image', 'text-domain')}
+							</Button>
+						)}
+					/>
+				</MediaUploadCheck>
 			</div>
 		</>
 	);

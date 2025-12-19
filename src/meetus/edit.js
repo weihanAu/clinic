@@ -43,7 +43,9 @@ export default function Edit({ attributes, setAttributes }) {
 	const [imageUrl1, setImageUrl1] = useState(attributes.imageUrl1 || '');
 	const [imageUrl2, setImageUrl2] = useState(attributes.imageUrl2 || '');
 	const [wysiwygContent, setWysiwygContent] = useState(attributes.wysiwygContent || '');
+	const [wysiwygContent1, setWysiwygContent1] = useState(attributes.wysiwygContent1 || '');
 	const [wysiwygContent2, setWysiwygContent2] = useState(attributes.wysiwygContent2 || '');
+	const [wysiwygContent3, setWysiwygContent3] = useState(attributes.wysiwygContent3 || '');
 	const [link1, setBannerlink1] = useState(attributes.link1 || '');
 	const [link2, setBannerlink2] = useState(attributes.link2 || '');
 	return (
@@ -119,10 +121,30 @@ export default function Edit({ attributes, setAttributes }) {
 				<RichText
 					tagName="div"
 					style={{ border: '1px solid #ccc', minHeight: '100px', padding: '10px' }}
+					value={wysiwygContent1}
+					onChange={(value) => {
+						setAttributes({ wysiwygContent1: value });
+						setWysiwygContent1(value);
+					}}
+					placeholder={__('Enter content for doctor1...', 'text-domain')}
+				/>
+				<RichText
+					tagName="div"
+					style={{ border: '1px solid #ccc', minHeight: '100px', padding: '10px' }}
 					value={wysiwygContent2}
 					onChange={(value) => {
 						setAttributes({ wysiwygContent2: value });
 						setWysiwygContent2(value);
+					}}
+					placeholder={__('Enter content for doctor2...', 'text-domain')}
+				/>
+				<RichText
+					tagName="div"
+					style={{ border: '1px solid #ccc', minHeight: '100px', padding: '10px' }}
+					value={wysiwygContent3}
+					onChange={(value) => {
+						setAttributes({ wysiwygContent3: value });
+						setWysiwygContent3(value);
 					}}
 					placeholder={__('Enter content for doctor2...', 'text-domain')}
 				/>

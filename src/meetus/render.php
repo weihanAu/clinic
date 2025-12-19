@@ -11,8 +11,9 @@
                 <img src="<?php echo $attributes["imageUrl1"]?>" class="profile-image"> 
                   <div class="profile-content">
                   <div class="profile-details">
-                     <h3><?php echo $attributes["title1"]?></h3>
-                     <p><?php echo $attributes["wysiwygContent"]?></p>
+                     <h3 class="title"><?php echo $attributes["title1"]?></h3>
+                     <p class="sub-title"><?php echo $attributes["wysiwygContent"]?></p>
+                    <p class="sub-p"><?php echo $attributes["wysiwygContent1"]?></p>
                   </div>
                   <div class="btn-container">
                    <a href="<?php echo esc_url( $attributes['link1'] ); ?>">
@@ -25,8 +26,9 @@
                  <img src="<?php echo $attributes["imageUrl2"]?>" class="profile-image"> 
                  <div class="profile-content">
                   <div class="profile-details">
-                     <h3><?php echo $attributes["title2"]?></h3>
-                    <p><?php echo $attributes["wysiwygContent2"]?></p>
+                     <h3 class="title"><?php echo $attributes["title2"]?></h3>
+                     <p class="sub-title"><?php echo $attributes["wysiwygContent2"]?></p>
+                    <p class="sub-p"><?php echo $attributes["wysiwygContent3"]?></p>
                   </div>
                   <div class="btn-container">
                     <a href="<?php echo esc_url( $attributes['link2'] ); ?>">

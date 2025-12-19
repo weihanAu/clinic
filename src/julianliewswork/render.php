@@ -15,18 +15,27 @@
          // Create a new query
          $mostpopular_query = new WP_Query( $args );
         ?>
-      
+        <?php
+           $slides = [
+                ['img' => '/wp-content/uploads/2025/01/image1.jpg', 'link' => $attributes['imageUrl1'] ?? '#'],
+                ['img' => '/wp-content/uploads/2025/01/image2.jpg', 'link' => $attributes['imageUrl2'] ?? '#'],
+                ['img' => '/wp-content/uploads/2025/01/image3.jpg', 'link' => $attributes['imageUrl3'] ?? '#'],
+                ['img' => '/wp-content/uploads/2025/01/image4.jpg', 'link' => $attributes['imageUrl4'] ?? '#'],
+                ['img' => '/wp-content/uploads/2025/01/image5.jpg', 'link' => $attributes['imageUrl5'] ?? '#'],
+            ];
+
+        ?>
          <div class="post-carousel">
             <div class="slides">
-                <?php if ( $mostpopular_query->have_posts() ) : ?>
-                    <?php while ( $mostpopular_query->have_posts() ) : $mostpopular_query->the_post(); ?>
-                        <div class="slide-item">
-                            <a href="<?php the_permalink(); ?>">
-                                <div class="thumbnail"><?php the_post_thumbnail(); ?></div>
-                            </a>
-                        </div>
-                    <?php endwhile; ?>
-                <?php endif; ?>  
+                 <?php foreach ( $slides as $slide ) : ?>
+                    <div class="slide-item">
+                        <a href="<?php echo esc_url( $slide['link'] ); ?>">
+                            <div class="thumbnail">
+                                <img src="<?php echo esc_url( $slide['link'] ); ?>" alt="">
+                            </div>
+                        </a>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
         <div class="post-operation">

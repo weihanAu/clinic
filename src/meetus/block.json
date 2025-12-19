@@ -37,7 +37,15 @@
 			"type": "string",
 			"default": ""
 		},
+		"wysiwygContent1": {
+			"type": "string",
+			"default": ""
+		},
 		"wysiwygContent2": {
+			"type": "string",
+			"default": ""
+		},
+		"wysiwygContent3": {
 			"type": "string",
 			"default": ""
 		}

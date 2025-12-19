@@ -84,6 +84,7 @@
 
 .wp-block-hudsonblock-popularposts .Julian-works-container .slide-item a .thumbnail img{
   aspect-ratio: 4/5;
+  min-width: 300px;
 }
 .wp-block-hudsonblock-popularposts .Julian-works-container .slide-item a{
   padding: 0 200px;
@@ -137,4 +138,7 @@
   .wp-block-hudsonblock-popularposts .popularposts-title {
     font-size: 3.4rem;
   }
+    .wp-block-hudsonblock-popularposts .Julian-works-container .slide-item a .thumbnail img{
+      min-width: none;
+    }
 }
