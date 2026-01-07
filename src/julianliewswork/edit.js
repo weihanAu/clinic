@@ -100,6 +100,12 @@ export default function Edit({ attributes, setAttributes }) {
 						)}
 					/>
 				</MediaUploadCheck>
+				<br />
+				<img src={attributes.imageUrl1} alt="Image 1" style={{ maxWidth: '100px', height: 'auto' }} />
+				<img src={attributes.imageUrl2} alt="Image 2" style={{ maxWidth: '100px', height: 'auto' }} />
+				<img src={attributes.imageUrl3} alt="Image 3" style={{ maxWidth: '100px', height: 'auto' }} />
+				<img src={attributes.imageUrl4} alt="Image 4" style={{ maxWidth: '100px', height: 'auto' }} />
+				<img src={attributes.imageUrl5} alt="Image 5" style={{ maxWidth: '100px', height: 'auto' }} />
 			</div>
 		</>
 	);
