@@ -48,6 +48,7 @@ export default function Edit({ attributes, setAttributes }) {
 	const [wysiwygContent3, setWysiwygContent3] = useState(attributes.wysiwygContent3 || '');
 	const [link1, setBannerlink1] = useState(attributes.link1 || '');
 	const [link2, setBannerlink2] = useState(attributes.link2 || '');
+	const [subTitleParagraph,setSP] = useState(attributes.subTitleParagraph || '');
 	return (
 		<>
 			<div {...useBlockProps()}>
@@ -83,6 +84,16 @@ export default function Edit({ attributes, setAttributes }) {
 						setBannerlink2(value);
 					}}
 				/>
+				<RichText
+					tagName="div"
+					style={{ border: '1px solid #ccc', minHeight: '100px', padding: '10px' }}
+					value={subTitleParagraph}
+					onChange={(value) => {
+						setAttributes({ subTitleParagraph: value });
+						setSP(value);
+					}}
+					placeholder={__('Enter contents...', 'text-domain')}
+				/>
 				<MediaUploadCheck>
 					<MediaUpload
 						onSelect={(media) => setAttributes({ imageUrl1: media.url })}
@@ -95,7 +106,7 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</MediaUploadCheck>
 				{attributes.imageUrl1 && <img width={200} height={"auto"} src={attributes.imageUrl1} alt="" />}
-				<MediaUploadCheck>
+				{/* <MediaUploadCheck>
 					<MediaUpload
 						onSelect={(media) => setAttributes({ imageUrl2: media.url })}
 						allowedTypes={['image']}
@@ -105,9 +116,9 @@ export default function Edit({ attributes, setAttributes }) {
 							</Button>
 						)}
 					/>
-				</MediaUploadCheck>
+				</MediaUploadCheck> */}
 				
-				{attributes.imageUrl2 && <img width={200} height={"auto"} src={attributes.imageUrl2} alt="" />}
+				{/* {attributes.imageUrl2 && <img width={200} height={"auto"} src={attributes.imageUrl2} alt="" />} */}
 				<RichText
 					tagName="div"
 					style={{border: '1px solid #ccc', minHeight: '100px', padding: '10px'}}
@@ -118,7 +129,7 @@ export default function Edit({ attributes, setAttributes }) {
 					}}
 					placeholder={__('Enter content for doctor1...', 'text-domain')}
 				/>
-				<RichText
+				{/* <RichText
 					tagName="div"
 					style={{ border: '1px solid #ccc', minHeight: '100px', padding: '10px' }}
 					value={wysiwygContent1}
@@ -127,7 +138,7 @@ export default function Edit({ attributes, setAttributes }) {
 						setWysiwygContent1(value);
 					}}
 					placeholder={__('Enter content for doctor1...', 'text-domain')}
-				/>
+				/> */}
 				<RichText
 					tagName="div"
 					style={{ border: '1px solid #ccc', minHeight: '100px', padding: '10px' }}
@@ -138,7 +149,7 @@ export default function Edit({ attributes, setAttributes }) {
 					}}
 					placeholder={__('Enter content for doctor2...', 'text-domain')}
 				/>
-				<RichText
+				{/* <RichText
 					tagName="div"
 					style={{ border: '1px solid #ccc', minHeight: '100px', padding: '10px' }}
 					value={wysiwygContent3}
@@ -147,7 +158,8 @@ export default function Edit({ attributes, setAttributes }) {
 						setWysiwygContent3(value);
 					}}
 					placeholder={__('Enter content for doctor2...', 'text-domain')}
-				/>
+				/> */}
+
 			</div>
 		</>
 	);

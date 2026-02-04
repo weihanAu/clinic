@@ -4,6 +4,9 @@
  */
 ?>
 <div  <?php echo get_block_wrapper_attributes(); ?>>
+    <?php
+        $filter = isset( $attributes['filter'] ) ? $attributes['filter'] : 'mostpopular';
+    ?>
 	<div class="popularposts-container">
         <h2 class="popularposts-title">Popular Topics</h2>
         <?php   

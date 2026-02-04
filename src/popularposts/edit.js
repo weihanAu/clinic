@@ -28,6 +28,8 @@ import "./editor.scss";
 import { PanelBody, TextControl, FormFileUpload } from "@wordpress/components";
 import { Button } from '@wordpress/components';
 import { MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
+import { useSelect } from '@wordpress/data';
+import { SelectControl, Placeholder, Spinner } from '@wordpress/components';
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -38,13 +40,46 @@ import { MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
  * @return {Element} Element to render.
  */
 export default function Edit({ attributes, setAttributes }) {
+	const selectedCategory = attributes.selectedCategory;
+	const [filter,setFilter] = useState(attributes.filter);
+	//fetch categories from wp rest api
+	const categories = useSelect((select) => {
+		return select('core').getEntityRecords('taxonomy', 'category', { per_page: -1 });
+	}, []);	
+	const options = [
+		{ label: __('Select a Category', 'text-domain'), value: '' }
+	];
+	if (categories) {
+		categories.forEach((cat) => {
+			options.push({
+				label: cat.name,
+				value: cat.id.toString(), // SelectControl expects strings for values usually
+			});
+		});
+	}
+	console.log('categories', options);
 
 	return (
 		<>
+		
 			<div {...useBlockProps()}>
 				<h2>
 					popular posts
 				</h2>
+						<SelectControl
+							label={__('Filter by Category', 'text-domain')}
+							value={selectedCategory}
+							options={options}
+							onChange={(value) => setAttributes({ selectedCategory: value })}
+							__nextHasNoMarginBottom
+						/>
+
+				{/* Preview in editor */}
+				<p>
+					{selectedCategory
+						? `Selected Category ID: ${selectedCategory}`
+						: 'No category selected.'}
+				</p>
 			</div>
 		</>
 	);

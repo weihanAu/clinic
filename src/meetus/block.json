@@ -48,6 +48,10 @@
 		"wysiwygContent3": {
 			"type": "string",
 			"default": ""
+		},
+		"subTitleParagraph":{
+			"type": "string",
+			"default": ""
 		}
 	},
 	"supports": {
