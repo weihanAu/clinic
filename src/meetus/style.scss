@@ -109,7 +109,7 @@
       /* Required for -webkit-line-clamp */
       overflow: hidden;
       /* Hide overflowing text */
-      -webkit-line-clamp: 1;
+      -webkit-line-clamp: 10;
       /* Limit to 1 line */
   }
   .profile-card{
@@ -119,6 +119,9 @@
     width: 100%;
     aspect-ratio: 16 / 9;
     height: auto;
+  }
+  .profile-details h3{
+    font-size: 2rem;
   }
 }
 

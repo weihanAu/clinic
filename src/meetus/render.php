@@ -5,7 +5,7 @@
 ?>
 <div  <?php echo get_block_wrapper_attributes(); ?>>
   <section class="specialist-section">
-        <h2>Meet Our Specialist Surgeon</h2>
+        <h2>Meet Our Specialist Surgeons</h2>
         <div ><p class="sec-paragraph sub-title"><?php echo $attributes["subTitleParagraph"] ?> </p></div>
         <div class="profile-image-container">
           <img src="<?php echo $attributes["imageUrl1"]?>" class="profile-image">
